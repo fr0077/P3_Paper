@@ -1,0 +1,121 @@
+\documentclass[uplatex, twocolumn]{jsarticle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% パッケージはここに追加。
+%1行目に何に使うか、2行目以降に使い方をコメントすること。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%一括コメントアウト
+%\begin{comment}
+\usepackage{comment}
+
+%数学記号
+%多数あるが、例えば\thereforeで'∴'（ゆえに）が出せる。
+\usepackage{amssymb}
+
+%行列、ベクトルなど
+%\begin{pmatrix}…\end{pmatrix}。表と同じように区切り、改行する。縦ベクトルは1列の行列として表現。
+\usepackage{amsmath}
+
+%定理・補題・定義・証明
+%\begin{theorem}, \begin{lemma}, \begin{definition}, \begin{proof}
+\usepackage{amsthm}
+
+%フォントの変更
+%なし（自動）。
+\usepackage{newpxtext, newpxmath}
+
+%画像の挿入
+%\includegraphics[width=***cm]{***.pdf}
+\usepackage[dvipdfmx]{graphicx}
+
+%文章を四角で囲む
+%\begin{itembox}[l]{title}…\end{itembox}など。
+\usepackage{ascmac}
+
+%図表を強制的にその場所に配置
+%位置指定で[h]のかわりに[H]とする。
+\usepackage{here}
+
+%文字の色を変える
+%\textcolor{red}{text}など。
+\usepackage{color}
+
+%urlをそのまま記載できる
+%\url{http://www.....}
+\usepackage{url}
+
+%urlやページへのリンク
+%なし（自動）。
+\usepackage[
+    dvipdfmx,
+    bookmarkstype=toc,
+    setpagesize=false,
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black,
+    bookmarks=true,
+    bookmarksopen=true,
+    bookmarksnumbered=true]{hyperref}
+    
+%urlやページへのリンク（pxjahyperを日本語環境で使用するのに必要）
+%なし（自動）。
+\usepackage{pxjahyper}
+
+%著者をまとめて表示
+%省略（rootでしか使用しないため）。
+\usepackage{authblk}
+
+%花文字
+%\mathscr{A}
+\usepackage{mathrsfs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%マクロはここに追加。
+%1行目に何に使うか、2行目以降に使い方をコメントすること。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%日本語で一般的でない用語で用いる。
+%\term{用語}{翻訳前の用語}
+\newcommand*{\term}[2]{\textsf{#1}{(\emph{#2})}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%スタイルの変更はここに追加。
+%1行目に変更するスタイルをコメントすること。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%脚注
+\renewcommand{\thefootnote}{\arabic{footnote})}
+%定理環境（amsthm）
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{lemma}[theorem]{補題}
+\renewcommand\proofname{\textbf{証明}}
+%著者
+\renewcommand\Authsep{\quad}
+\renewcommand\Authands{\quad}
+
+\title{卒 業 論 文\\
+題目\hspace{1cm}スピン・エコー}
+
+\date{提出年月\quad2017年2月}
+
+\author[$\dagger$]{加須屋春樹}
+\author[$\dagger$]{近藤寛記}
+\author[$\dagger$]{鈴木一輝}
+\author[$\dagger$]{武中亮}
+\author[$\dagger$]{間宮章}
+\author[$\dagger$]{藤井涼平}
+%Bad practiceだが、こうするくらいしか思いつかない
+\author[ ]{\\}
+
+\affil[$\dagger$]{京都大学 理学部}
+\author[ ]{\\}
+\author[ ]{指導教員\quad}
+\author[*]{ABC教授}
+\author[*]{DEF教授}
+\affil[*]{京都大学 理学研究科}
+\begin{document}
+\maketitle
+
+\end{document}
