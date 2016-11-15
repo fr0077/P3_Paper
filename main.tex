@@ -1,4 +1,4 @@
-\documentclass[uplatex, twocolumn]{jsarticle}
+\documentclass[uplatex, twocolumn, titlepage]{jsarticle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % パッケージはここに追加。
@@ -85,12 +85,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %脚注
 \renewcommand{\thefootnote}{\arabic{footnote})}
+
 %定理環境（amsthm）
 \theoremstyle{definition}
 \newtheorem{theorem}{定理}
 \newtheorem{definition}[theorem]{定義}
 \newtheorem{lemma}[theorem]{補題}
 \renewcommand\proofname{\textbf{証明}}
+
 %著者
 \renewcommand\Authsep{\quad}
 \renewcommand\Authands{\quad}
@@ -117,5 +119,8 @@
 \affil[*]{京都大学 理学研究科}
 \begin{document}
 \maketitle
+\tableofcontents
 
+\bibliographystyle{jplain}
+\bibliography{bibliography}
 \end{document}
