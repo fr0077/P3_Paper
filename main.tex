@@ -21,6 +21,11 @@
 %\begin{theorem}, \begin{lemma}, \begin{definition}, \begin{proof}
 \usepackage{amsthm}
 
+%ブラケット記法
+%\bra{a}, \ket{a}, \braket{a|H|a}。先頭を大文字にする(\Bra, \Ket, ...)と、
+%中身の大きさに応じてブラケットの大きさも変わる。
+\usepackage{braket}
+
 %フォントの変更
 %なし（自動）。
 \usepackage{newpxtext, newpxmath}
@@ -31,10 +36,10 @@
 
 %文章を四角で囲む／左に線を引く
 %\begin{oframed}、\begin{leftbar}など。
-\usepackage{ascmac}
+\usepackage{framed}
 
 %図表を強制的にその場所に配置
-%位置指定で[h]のかわりに[H]とする。
+%位置指定で[h]のかわりに[H]とする。これを使うと行間が不自然になる場合もある。
 \usepackage{here}
 
 %文字の色を変える
@@ -59,7 +64,7 @@
     bookmarksopen=true,
     bookmarksnumbered=true]{hyperref}
     
-%urlやページへのリンク（pxjahyperを日本語環境で使用するのに必要）
+%urlやページへのリンク（hyperrefを日本語環境で使用するのに必要）
 %なし（自動）。
 \usepackage{pxjahyper}
 
@@ -78,6 +83,13 @@
 %日本語で一般的でない用語で用いる。
 %\term{用語}{翻訳前の用語}
 \newcommand*{\term}[2]{\textsf{#1}{(\emph{#2})}}
+
+%等号の上下に文字列を表示。文字列の長さに応じて等号が伸縮。
+%\xequal[下]{上}
+\makeatletter
+\newcommand{\xequal}[2][]{\ext@arrow 0055{\equalfill@}{#1}{#2}}
+\def\equalfill@{\arrowfill@\Relbar\Relbar\Relbar}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %スタイルの変更はここに追加。
