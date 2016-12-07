@@ -126,13 +126,15 @@
 \affil[$\dagger$]{京都大学 理学部}
 \author[ ]{\\}
 \author[ ]{指導教員\quad}
-\author[*]{ABC教授}
-\author[*]{DEF教授}
+\author[*]{菅沼秀夫 准教授}
+\author[*]{成木恵 准教授}
 \affil[*]{京都大学 理学研究科}
 \begin{document}
 \maketitle
 \tableofcontents
-
+%一度も\cite{}を使わないと自動テストに失敗するため、例として追加した参考文献を呼び出しています。
+%本文中で本当に使う参考文献を追加した後は、この行と対応するbibliography.bib/testを削除してかまいません。
+\nocite{test}
 \bibliographystyle{jplain}
 \bibliography{bibliography}
 \end{document}
