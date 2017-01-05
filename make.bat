@@ -1,8 +1,8 @@
-echo off
-rem ‚±‚Ìƒoƒbƒ`ƒtƒ@ƒCƒ‹‚ğÀs‚·‚é‚±‚Æ‚ÅƒRƒ“ƒpƒCƒ‹‚µ‚Ü‚·B
-rem ŒÂX‚ÌTeXƒtƒ@ƒCƒ‹‚Ímain.tex‚©‚çŒÄ‚Ño‚µ‚Ü‚·B
-rem ‚µ‚½‚ª‚Á‚ÄAŒÂX‚ÌTeXƒtƒ@ƒCƒ‹‚ğ’P“Æ‚ÅƒRƒ“ƒpƒCƒ‹‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB
+@echo off
+rem ã“ã®ãƒãƒƒãƒãƒ•ã‚¡ã‚¤ãƒ«ã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã—ã¾ã™ã€‚
+rem å€‹ã€…ã®TeXãƒ•ã‚¡ã‚¤ãƒ«ã¯main.texã‹ã‚‰å‘¼ã³å‡ºã—ã¾ã™ã€‚
+rem ã—ãŸãŒã£ã¦ã€å€‹ã€…ã®TeXãƒ•ã‚¡ã‚¤ãƒ«ã‚’å˜ç‹¬ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚
 
-ptex2pdf main.tex -u -l -ot -synctex=1 -no-guess-input-enc -kanji=utf8
+ptex2pdf -u -l -ot -synctex=1 -kanji=utf8 -no-guess-input-enc main.tex
 upbibtex main
-ptex2pdf main.tex -u -l
+ptex2pdf -u -l  main.tex
