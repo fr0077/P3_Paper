@@ -21,6 +21,8 @@ install:
   - tlmgr install here
   - tlmgr install braket
 
+# ここからテスト開始
 script:
-  - ptex2pdf main.tex -u -l -ot -interaction=batchmode
+  - ptex2pdf -u -l -ot -interaction=batchmode main.tex
   - upbibtex main
+  - ptex2pdf -u -l -ot -interaction=batchmode main.tex
