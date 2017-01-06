@@ -1,7 +1,7 @@
 @echo off
-rem TeX‚É‚æ‚Á‚ÄŽ©“®¶¬‚³‚ê‚éƒtƒ@ƒCƒ‹iPDF‚ðœ‚­j‚ðÁ‹Ž‚µ‚Ü‚·B
-rem ‚±‚±‚ÅÁ‹Ž‚³‚ê‚éƒtƒ@ƒCƒ‹‚ÍA.gitignore‚Å–³Ž‹‚·‚é‚æ‚¤‚ÉÝ’è‚µ‚Ä‚¢‚é‚½‚ßA
-rem ƒvƒbƒVƒ…‘O‚É‚±‚ê‚ðŽÀs‚·‚é•K—v‚Í‚ ‚è‚Ü‚¹‚ñB
+rem TeXã«ã‚ˆã£ã¦è‡ªå‹•ç”Ÿæˆã•ã‚Œã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆPDFã‚’é™¤ãï¼‰ã‚’æ¶ˆåŽ»ã—ã¾ã™ã€‚
+rem ã“ã“ã§æ¶ˆåŽ»ã•ã‚Œã‚‹ãƒ•ã‚¡ã‚¤ãƒ«ã¯ã€.gitignoreã§ç„¡è¦–ã™ã‚‹ã‚ˆã†ã«è¨­å®šã—ã¦ã„ã‚‹ãŸã‚ã€
+rem ãƒ—ãƒƒã‚·ãƒ¥å‰ã«ã“ã‚Œã‚’å®Ÿè¡Œã™ã‚‹å¿…è¦ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
 del *.aux
 del *.log
