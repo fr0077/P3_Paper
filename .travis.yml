@@ -25,4 +25,3 @@ install:
 script:
   - ptex2pdf -u -l -ot -interaction=batchmode main.tex
   - upbibtex main
-  - ptex2pdf -u -l -ot -interaction=batchmode main.tex

@@ -5,4 +5,3 @@ rem したがって、個々のTeXファイルを単独でコンパイルする�
 
 ptex2pdf -u -l -ot -synctex=1 -kanji=utf8 -no-guess-input-enc main.tex
 upbibtex main
-ptex2pdf -u -l  main.tex
