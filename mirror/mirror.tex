@@ -1,0 +1,64 @@
+\section{スーパーミラーによるスピンの選択}
+\nocite{neutron_spin_optics}
+この実験では、特定のスピンを持つ中性子を選択的に取り出す必要がある。この節では、そのために用いるスーパーミラーの原理について説明する。
+
+\subsection{中性子の光学的性質}
+\paragraph{屈折率}
+中性子が物質中で感じるポテンシャルを$V$とすると、エネルギー保存から
+\begin{align}
+k^2-k'^2=2mV
+\end{align}
+となる。$k$は入射中性子の波数、$k'$は物質中での中性子の波数である。
+屈折率の定義
+\begin{align}
+n=\frac{k'}{k}
+\end{align}
+から、中性子の物質中における屈折率は
+\begin{align}
+n^2=1-\frac{2mV}{k^2}\label{mirror_neutron_refindex}
+\end{align}
+となる。
+
+\paragraph{全反射が起きる条件}\label{mirrir_perfect_reflection}
+$n-1$が有限の値を持つことは、中性子が全反射しうることを意味する。全反射が起きるための角度の条件は、
+臨界角
+\begin{align}
+\theta^*=\arccos{n}
+\end{align}
+を用いて
+\begin{align}
+n\leq\cos\theta^* \label{mirror_refindex_range}
+\end{align}
+となる。また、全反射が起きるための入射エネルギー$E$の条件は、(\ref{mirror_neutron_refindex}), (\ref{mirror_refindex_range})より
+\begin{align}
+&n^2=1-\frac{2mV}{k^2}\leq\cos^2\theta^*\\
+&E\sin^2\theta\leq E\sin^2\theta^*=\frac{k^2}{2m}\sin^2\theta^*\leq V
+\end{align}
+となる。すなわち、エネルギーの``ミラーに対し垂直な成分''が$V$よりも小さければ、全反射が起きることがわかる。
+
+\subsection{磁性体単層膜によるスピンの選択}
+磁性体の単層膜を利用することで、特定のスピンを持つ中性子を選択的に取り出すことができる。
+中性子が単層膜中で受けるポテンシャルは、核力によるポテンシャル$V_\mathrm{n}$、単層膜中の磁束密度$B$を用いて
+\begin{align}
+V^{\pm}&=V_\mathrm{n}\pm|\mu_\mathrm{n}|B
+\end{align}
+となる。$\mu_\mathrm{n}|B|$の符号とスピンの向きの対応は磁場の向きによって決まるが、ここでは上向きスピンのときに正になるものとする。
+
+\ref{mirrir_perfect_reflection}節で述べたように、入射中性子のエネルギーを$E$とすると、
+\[
+E\sin^2\theta\leq V
+\]
+のときに全反射が起きる。
+$V^-< E\sin^2\theta\leq V^+$のエネルギーを持つ中性子をこの単層膜に入射させると、下向きスピンの中性子はほとんどが透過するが、
+上向きスピンの中性子は全反射される。$V^+<E\sin^2\theta$の中性子が入射した場合は、上向き、下向き両方の粒子が
+透過する確率を持つ。
+そのため、透過した中性子には上向きスピンと下向きスピンの両方が含まれる。
+$E\sin^2\theta\leq V^-$となるような低エネルギーの中性子は今回の実験では無視できるほど少ないため、
+考えなくて良い。
+
+このようにして、単層膜は上向きスピンの粒子のみを選択的に反射する。
+
+\subsection{スーパーミラー}
+膜厚を少しづつ変えた多層膜を使うことで、単層膜よりも高いエネルギーの中性子を反射するミラーを作ることができる。
+これをスーパーミラーと呼ぶ。
+\paragraph{Bragg条件}
