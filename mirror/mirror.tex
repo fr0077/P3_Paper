@@ -34,7 +34,8 @@ n\leq\cos\theta^* \label{mirror_refindex_range}
 &n^2=1-\frac{2mV}{k^2}\leq\cos^2\theta^*\\
 &E\sin^2\theta\leq E\sin^2\theta^*=\frac{k^2}{2m}\sin^2\theta^*\leq V
 \end{align}
-となる。すなわち、エネルギーの``ミラーに対し垂直な成分''が$V$よりも小さければ、全反射が起きることがわかる。
+となる。すなわち、臨界角以下で入射する時、エネルギーの``ミラーに対し垂直な成分''が$V$よりも小さければ、
+全反射が起きることがわかる。
 
 \subsection{磁性体単層膜によるスピンの選択}
 磁性体の単層膜を利用することで、特定のスピンを持つ中性子を選択的に取り出すことができる。
@@ -56,9 +57,32 @@ $V^-< E\sin^2\theta\leq V^+$のエネルギーを持つ中性子をこの単層�
 $E\sin^2\theta\leq V^-$となるような低エネルギーの中性子は今回の実験では無視できるほど少ないため、
 考えなくて良い。
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{mirror/mono_mirror.pdf}
+\caption{単層膜によるスピンの選択の原理。実際には、ポテンシャルは紙面奥に向かって2次元に広がっており、
+中性子は臨界角以下で入射していることに注意。}
+\end{figure}
 このようにして、単層膜は上向きスピンの粒子のみを選択的に反射する。
 
 \subsection{スーパーミラー}
-膜厚を少しづつ変えた多層膜を使うことで、単層膜よりも高いエネルギーの中性子を反射するミラーを作ることができる。
+\begin{figure}[H]
+\centering
+\includegraphics{mirror/super_mirror.pdf}
+\caption{スーパーミラーの構造\cite{seki}\label{mirror_super_mirror}}
+\end{figure}
+図\ref{mirror_super_mirror}のように膜厚を少しずつ変えた多層膜を使うことで、
+単層膜よりも高いエネルギーの中性子を反射するミラーを作ることができる。
 これをスーパーミラーと呼ぶ。
+
 \paragraph{Bragg条件}
+$E\sin^2\theta\leq V^+$の中性子は多層膜の表面で全反射されるが、$V^+<E\sin^2\theta$の中性子は多層膜の内部に侵入する。
+多層膜の膜間隔を$d$とすると、侵入した中性子はBragg条件
+\begin{align}
+2d\sin\theta=\lambda
+\end{align}
+を満たす場合に反射波が強め合う。$\lambda$は中性子の物質波の波長で、
+$\lambda=2\pi/k$の関係にある。
+
+$d$を少しずつ変えることで、$V^+<E\sin^2\theta$の様々なエネルギーを持つ中性子がBragg反射される。
+こうすることで、単層膜に比べより広いエネルギーの中性子のスピンを偏極することができる。
