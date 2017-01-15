@@ -15,6 +15,7 @@ install:
 # パッケージをTeXファイルに追加した際、自動テストのビルドが失敗する場合はここにも追加してください。
 # 1つのパッケージが別のパッケージに依存する場合は、まとめて記述してください。
   - tlmgr install comment
+  - tlmgr install collection-fontsextra
   - tlmgr install newtx
   - tlmgr install newpx fontaxes kastrup tex-gyre
   - tlmgr install framed
