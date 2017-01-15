@@ -5,7 +5,7 @@
 
 \subsection{中性子の光学的性質}
 \paragraph{屈折率}
-中性子が物質中で感じるポテンシャルを$V$とすると、エネルギー保存から
+中性子が物質中で感じるポテンシャルを$V>0$とすると、エネルギー保存から
 \begin{align}
 k^2-k'^2=2mV
 \end{align}
@@ -21,8 +21,13 @@ n^2=1-\frac{2mV}{k^2}\label{mirror_neutron_refindex}
 となる。
 
 \paragraph{全反射が起きる条件}\label{mirrir_perfect_reflection}
+\begin{figure}[h]
+\centering
+\includegraphics{mirror/reflect.pdf}
+\caption{中性子が物質中に入射した後、屈折、反射する様子。}
+\end{figure}
 $n-1$が有限の値を持つことは、中性子が全反射しうることを意味する。全反射が起きるための角度の条件は、
-臨界角
+Snellの法則から導出される臨界角
 \begin{align}
 \theta^*=\arccos{n}
 \end{align}
