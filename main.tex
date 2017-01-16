@@ -1,4 +1,4 @@
-\documentclass[uplatex, titlepage]{jsarticle}
+\documentclass[uplatex, titlepage, report]{jsbook}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % パッケージはここに追加。
@@ -109,10 +109,10 @@
 \renewcommand\Authsep{\quad}
 \renewcommand\Authands{\quad}
 
-\title{卒 業 論 文\\
-題目\hspace{1cm}スピン・エコー}
+%もう少しまともなタイトルを考える
+\title{スピン・エコー}
 
-\date{提出年月\quad2017年2月}
+\date{\vspace{3cm} \includegraphics{logo.pdf}\\ \vspace{5cm} 提出年月\quad2017年4月}
 
 \author[$\dagger$]{加須屋春樹}
 \author[$\dagger$]{近藤寛記}
@@ -132,9 +132,10 @@
 \begin{document}
 \maketitle
 \tableofcontents
-%一度も\cite{}を使わないと自動テストに失敗するため、例として追加した参考文献を呼び出しています。
-%本文中で本当に使う参考文献を追加した後は、この行と対応するbibliography.bib/testを削除してかまいません。
-\nocite{test}
+
+%ここで文書をincludeします
+\include{mirror/mirror}
+
 \bibliographystyle{jplain}
 \bibliography{bibliography}
 \end{document}
