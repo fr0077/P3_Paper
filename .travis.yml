@@ -14,12 +14,9 @@ install:
 # 自動テストの時間を短縮するために、サーバーには最小限のパッケージしかインストールしていません。
 # パッケージをTeXファイルに追加した際、自動テストのビルドが失敗する場合はここにも追加してください。
 # 1つのパッケージが別のパッケージに依存する場合は、まとめて記述してください。
-  - tlmgr install comment
+  - tlmgr install boondox
   - tlmgr install newtx
-  - tlmgr install newpx fontaxes kastrup tex-gyre
-  - tlmgr install framed
-  - tlmgr install here
-  - tlmgr install braket
+  - tlmgr install newpx
 
 # ここからテスト開始
 script:
