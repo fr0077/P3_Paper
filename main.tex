@@ -32,7 +32,7 @@
 
 %画像の挿入
 %\includegraphics[width=***cm]{***.pdf}
-\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{,graphicx}
 
 %文章を四角で囲む／左に線を引く
 %\begin{oframed}、\begin{leftbar}など。
@@ -75,6 +75,10 @@
 %花文字
 %\mathscr{A}
 \usepackage{mathrsfs}
+
+%化学式
+%\ce{^3He},\ce{Na2SO3}
+\usepackage[version=3]{mhchem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
@@ -132,6 +136,7 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\include{detector/detector2}
 %一度も\cite{}を使わないと自動テストに失敗するため、例として追加した参考文献を呼び出しています。
 %本文中で本当に使う参考文献を追加した後は、この行と対応するbibliography.bib/testを削除してかまいません。
 \nocite{test}
