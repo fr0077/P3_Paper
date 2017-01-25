@@ -11,3 +11,4 @@
 *.bbl
 *.toc
 main.pdf
+.DS_STORE
