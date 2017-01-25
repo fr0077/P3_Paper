@@ -1,25 +1,37 @@
 \def\vector#1{\mbox{\boldmath $#1$}}
+\section{実験原理}
+領域Ⅰから、
+\begin{align}
+{\psi}_{Ⅰ}(x,t)=
+\begin{pmatrix}
+e^{-iw_{z}x/v} \\
+0
+\end{pmatrix}
+e^{ik_{0}x}e^{-iw_{0}t}
+\end{align}
+のような波動関数で表される粒子が、領域Ⅶでどのような状態になるのかを考える。
+
 領域Ⅱにおける磁場は
 \begin{align}
-\vector{B}=B_{r}\cos(w_{s}t)\vector{\hat{x}}+B_{r}sin(w_{s}t)\vector{\hat{y}}+B_{z}\vector{\hat{z}}
+\bm{B}=B_{r}\cos(w_{s}t)\bm{\hat{x}}+B_{r}\sin(w_{s}t)\bm{\hat{y}}+B_{z}\bm{\hat{z}}
 \end{align}
 とする。
 \begin{align}
-{\hbar}w_{r}=|{\mu}B_{r}|
+w_{r}=|{\mu}B_{r}|
 \end{align}
 \begin{align}
-{\hbar}w_{z}=|{\mu}B_{z}|
+w_{z}=|{\mu}B_{z}|
 \end{align}
 とする。この時、領域Ⅱにおけるシュレディンガー方程式は
 \begin{align}
-i{\hbar}\frac{\partial {\psi}_{Ⅱ}(x,t)}{\partial t}=\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+{\hbar}w_{r}\cos(w_{s}t){\sigma}_{x}+{\hbar}w_{r}\sin(w_{s}t){\sigma}_{y}+{\hbar}w_{z}{\sigma}_{z}\right){\psi}_{Ⅱ}(x,t)
+i\frac{\partial {\psi}_{Ⅱ}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+w_{r}\cos(w_{s}t){\sigma}_{x}+w_{r}\sin(w_{s}t){\sigma}_{y}+{\hbar}w_{z}{\sigma}_{z}\right){\psi}_{Ⅱ}(x,t)
 \end{align}
 と書ける。ここで、
 \begin{align}
-{\hbar}w_{r}\cos(w_{s}t){\sigma}_{x}+{\hbar}w_{r}\sin(w_{s}t){\sigma}_{y}+{\hbar}w_{z}{\sigma}_{z}=
+w_{r}\cos(w_{s}t){\sigma}_{x}+w_{r}\sin(w_{s}t){\sigma}_{y}+w_{z}{\sigma}_{z}=
 \begin{pmatrix}
-{\hbar}w_{z} &{\hbar}w_{r}e^{-iw_{s}t} \\
-{\hbar}w_{r}e^{iw_{s}t} &-{\hbar}w_{z}
+w_{z} &w_{r}e^{-iw_{s}t} \\
+w_{r}e^{iw_{s}t} &-w_{z}
 \end{pmatrix}
 \end{align}
 $と書ける。角速度w_{s}でz軸の周りに回転するユニタリー変換$
@@ -33,12 +45,12 @@ e^{iw_{s}t} &0 \\
 をもちいて
 \begin{align}
 U_{T}\begin{pmatrix}
-{\hbar}w_{z} &{\hbar}w_{r}e^{-iw_{s}t} \\
-{\hbar}w_{r}e^{iw_{s}t} &-{\hbar}w_{z}
+w_{z} &w_{r}e^{-iw_{s}t} \\
+w_{r}e^{iw_{s}t} &-w_{z}
 \end{pmatrix}U_{T}^{\dagger}=
 \begin{pmatrix}
-{\hbar}w_{z} &{\hbar}w_{r} \\
-{\hbar}w_{r} &-{\hbar}w_{z}
+w_{z} &w_{r} \\
+w_{r} &-w_{z}
 \end{pmatrix}
 \end{align}
 が成り立つ。
@@ -47,15 +59,15 @@ U_{T}\begin{pmatrix}
 \end{align}
 $とすると{\psi}_{R}(x,t)の満たすシュレディンガー方程式は$
 \begin{align}
-i{\hbar}\frac{\partial {\psi}_{R}(x,t)}{\partial t}=\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+{\hbar}w_{r}{\sigma}_{x}+({\hbar}w_{z}-\frac{1}{2}{\hbar}w_{s}){\sigma}_{z}\right){\psi}_{R}(x,t)
+i\frac{\partial {\psi}_{R}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+w_{r}{\sigma}_{x}+\left(w_{z}-\frac{1}{2}w_{s}\right){\sigma}_{z}\right){\psi}_{R}(x,t)
 \end{align}
 となる。いま、共鳴条件
 \begin{align}
-{\epsilon}=\frac{1}{2}{\hbar}w_{s}-{\hbar}w_{z}=0
+{\epsilon}=\frac{1}{2}w_{s}-w_{z}=0
 \end{align}
 が成り立っているとする。この時、シュレディンガー方程式は
 \begin{align}
-i{\hbar}\frac{\partial {\psi}_{R}(x,t)}{\partial t}=\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+{\hbar}w_{r}{\sigma}_{x}\right){\psi}_{R}(x,t)
+i\frac{\partial {\psi}_{R}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+w_{r}{\sigma}_{x}\right){\psi}_{R}(x,t)
 \end{align}
 いま、
 \begin{align}
@@ -75,9 +87,9 @@ U_{D}{\sigma}_{x}U_{D}^{\dagger}={\sigma}_{z}
 \end{align}
 $とすると、{\psi}_{D}(x,t)の満たすシュレーディンガー方程式は$
 \begin{align}
-i{\hbar}\frac{\partial {\psi}_{D}(x,t)}{\partial t}=\left(-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+{\hbar}w_{r}{\sigma}_{z}\right){\psi}_{D}(x,t)
+i\frac{\partial {\psi}_{D}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+w_{r}{\sigma}_{z}\right){\psi}_{D}(x,t)
 \end{align}
-$この方程式の解のうち、エネルギー固有値がE_{n}={\hbar}w_{n}であるものは$
+$この方程式の解のうち、エネルギー固有値がE_{n}=w_{n}であるものは$
 \begin{align}
 {\psi}_{D}(x,t) =
 \begin{pmatrix}
@@ -88,7 +100,7 @@ e^{-iw_{n}t}
 \end{align}
 ここで、
 \begin{align}
-\frac{{{\hbar}^2}{k_{n}^{\pm}}^2}{2m}{\pm}{\hbar}w_{r}=E_{n}
+\frac{{k_{n}^{\pm}}^2}{2m}{\pm}w_{r}=E_{n}
 \end{align}
 が成り立つ。ゆえに、領域Ⅱにおける波動関数は
 \begin{align}
@@ -98,6 +110,7 @@ e^{-iw_{n}t}
 \left[(A_{n}^{+}e^{ik_{n}^{+}x}+B_{n}^{+}e^{-ik_{n}^{+}x})-(A_{n}^{-}e^{ik_{n}^{-}x}+B_{n}^{-}e^{-ik_{n}^{-}x})\right]e^{-i(w_{n}-w_{s}/2)t}
 \end{pmatrix}
 \end{align}
+
 いま、入射波、すなわち領域Ⅰにおける波動関数を
 \begin{align}
 {\psi}_{Ⅰ}(x,t)=
@@ -107,9 +120,9 @@ e^{-iw_{z}x/v} \\
 \end{pmatrix}
 e^{ik_{0}x}e^{-iw_{0}t}
 \end{align}
-$とする。ここで、v=\frac{{\hbar}k_{0}}{m}であり、$
+$とする。ここで、v={k_{0}}/{m}であり、$
 \begin{align}
-\frac{{{\hbar}^2}k_{0}^2}{2m}=E_{0}={\hbar}w_{0}
+\frac{k_{0}^2}{2m}=E_{0}=w_{0}
 \end{align}
 $が成り立つ。x=0における接続条件により、以下の4つの式が任意のtについて成り立つ。$
 \begin{align}
@@ -138,7 +151,8 @@ w_{n}=w_{0}-w_{s}/2
 \end{align}
 $を満たすnを1とすると、A_{1}^{\pm},B_{1}^{\pm}は0ではない。以上から、$
 \begin{align}
-{\psi}_{Ⅱ}(x,t)=&\frac{1}{\sqrt{2}}
+{\psi}_{Ⅱ}(x,t) \notag
+=&\frac{1}{\sqrt{2}}
 \begin{pmatrix}
 \left[(A_{1}^{+}e^{ik_{1}^{+}x}+B_{1}^{+}e^{-ik_{1}^{+}x})+(A_{1}^{-}e^{ik_{1}^{-}x}+B_{1}^{-}e^{-ik_{1}^{-}x})\right]e^{-i(w_{1}+w_{s}/2)t} \\
 \left[(A_{1}^{+}e^{ik_{1}^{+}x}+B_{1}^{+}e^{-ik_{1}^{+}x})-(A_{1}^{-}e^{ik_{1}^{-}x}+B_{1}^{-}e^{-ik_{1}^{-}x})\right]e^{-i(w_{1}-w_{s}/2)t}
@@ -159,7 +173,7 @@ e^{-iw_{n}t}
 \end{align}
 ここで
 \begin{align}
-\frac{{{\hbar}^2}{K_{n}^{\pm}}^2}{2m}{\pm}{\hbar}w_{z}={\hbar}w_{n}
+\frac{{K_{n}^{\pm}}^2}{2m}{\pm}w_{z}=w_{n}
 \end{align}
 $が成り立つ。x=dにおける接続より、以下の4つの式が任意のtについて成り立つ。$
 \begin{align}
@@ -206,21 +220,21 @@ C_{2}^{-}e^{iK_{2}^{-}x}e^{-i(w_{0}-w_{s})t}
 \end{align}
 である。ここで、
 \begin{align}
-\frac{{{\hbar}^2}{K_{n}^{\pm}}^2}{2m}{\pm}{\hbar}w_{z}={\hbar}w_{n}
+\frac{{K_{n}^{\pm}}^2}{2m}{\pm}w_{z}=w_{n}
 \end{align}
 により、
 \begin{align}
-\frac{{{\hbar}^2}{K_{0}^{+}}^2}{2m}+{\hbar}w_{z}={\hbar}w_{0}
+\frac{{K_{0}^{+}}^2}{2m}+w_{z}=w_{0}
 \end{align}
 \begin{align}
-\frac{{{\hbar}^2}{K_{2}^{-}}^2}{2m}-{\hbar}w_{z}={\hbar}(w_{0}-w_{s})
+\frac{{K_{2}^{-}}^2}{2m}-w_{z}=w_{0}-w_{s}
 \end{align}
 よって
 \begin{align}
-K_{0}^{+}=\sqrt{\frac{2m}{{\hbar}^2}({\hbar}w_{0}-{\hbar}w_{z})}{\simeq}k_{0}-w_{z}/v
+K_{0}^{+}=\sqrt{2m(w_{0}-w_{z})}{\simeq}k_{0}-w_{z}/v
 \end{align}
 \begin{align}
-K_{2}^{-}=\sqrt{\frac{2m}{{\hbar}^2}({\hbar}(w_{0}-w_{s})+{\hbar}w_{z})}{\simeq}k_{0}+(w_{z}-w_{s})/v
+K_{2}^{-}=\sqrt{2m((w_{0}-w_{s})+w_{z})}{\simeq}k_{0}+(w_{z}-w_{s})/v
 \end{align}
 よって
 \begin{align}
@@ -246,27 +260,28 @@ w_{s}=2w_{z}
 \end{align}
 により、
 \begin{align}
-{\psi}_{Ⅲ}(x,t)=&
+{\psi}_{Ⅲ}(x,t)=& \notag
 \begin{pmatrix}
 C_{0}^{+}e^{i(-w_{z}/v)x} \\
 C_{2}^{-}e^{i(-w_{z}/v)x}e^{iw_{s}t}
 \end{pmatrix}
-e^{ik_{0}x}e^{-iw_{0}t}\\
+e^{ik_{0}x}e^{-iw_{0}t}\\ \notag
 =&\begin{pmatrix}
 C_{0}^{+} \\
 C_{2}^{-}e^{iw_{s}t}
 \end{pmatrix}
-e^{-iw_{z}/vx}e^{ik_{0}x}e^{-iw_{0}t}\\
+e^{-iw_{z}/vx}e^{ik_{0}x}e^{-iw_{0}t}\\ 
 =&\begin{pmatrix}
 \cos(w_{r}d/v) \\
 -i\sin(w_{r}d/v)e^{iw_{s}t}
 \end{pmatrix}
-e^{-iw_{z}/vx}e^{ik_{0}x}e^{-iw_{0}t}\\
+e^{-iw_{z}/vx}e^{ik_{0}x}e^{-iw_{0}t}  
 =&\begin{pmatrix}
 \cos(w_{r}d/v)e^{i(k_{0}-w_{z}/v)x}e^{-iw_{0}t} \\
--i\sin(w_{r}d/v)e^{i(k_{0}-w_{z}/v)x}e^{-i(w_{0}-w_{s})t}
+-i\sin(w_{r}d/v)e^{i(k_{0}-w_{z}/v)x}e^{-i(w_{0}-w_{s})t} 
 \end{pmatrix}
 \end{align}
+
 $領域ⅢとⅣの境界x=l_{1}における波動関数は$
 \begin{align}
 {\psi}_{Ⅲ}(x=l_{1},t)=
@@ -275,7 +290,7 @@ $領域ⅢとⅣの境界x=l_{1}における波動関数は$
 -i\sin(w_{r}d/v)e^{i(k_{0}-w_{z}/v)l_{1}}e^{-i(w_{0}-w_{s})t}
 \end{pmatrix}
 \end{align}
-$領域Ⅳにおける磁場をB=\frac{{\hbar}w}{\mu}とすると、この領域ではスピン上成分が波数$
+$領域Ⅳにおける磁場をB={w}/{\mu}とすると、この領域ではスピン上成分が波数$
 \begin{align}
 k_{0}-w/v
 \end{align}
@@ -291,6 +306,7 @@ k_{0}-(w-w_{s})/v
 -i\sin(w_{r}d/v)e^{i(k_{0}-w_{z}/v)l_{1}}e^{i(k_{0}-(w-w_{s})/v)(x-l_{1})}e^{-i(w_{0}-w_{s})t}
 \end{pmatrix}
 \end{align}
+
 領域Ⅴでは、両成分とも波数
 \begin{align}
 k_{0}-w_{z}/v
@@ -303,6 +319,7 @@ k_{0}-w_{z}/v
 -i\sin(w_{r}d/v)e^{i(k_{0}-w_{z}/v)l_{1}}e^{i(k_{0}-(w-w_{s})/v)(l_{2}-l_{1})}e^{i(k_{0}-w_{z}/v)(x-l_{2})}e^{-i(w_{0}-w_{s})t}
 \end{pmatrix}
 \end{align}
+
 $領域ⅤとⅥの境界x=l_{3}における波動関数は$
 \begin{align}
 {\psi}_{Ⅴ}(x=l_{3},t)=
@@ -328,7 +345,7 @@ $領域Ⅵにおける波動関数のうち、エネルギーがE_{n}である�
 \end{align}
 である。ここで、
 \begin{align}
-\frac{{{\hbar}^2}{k_{n}^{\pm}}^2}{2m}{\pm}{\hbar}w_{r}={\hbar}w_{n}
+\frac{{k_{n}^{\pm}}^2}{2m}{\pm}w_{r}=w_{n}
 \end{align}
 $が成り立つ。x=l_{3}における接続により$
 \begin{align}
@@ -363,6 +380,7 @@ D_{2}^{-}=\frac{1}{2}e^{-ik_{2}^{-}l_{3}}({\alpha}-{\beta})
 \left(({\alpha}+{\beta})e^{ik_{2}^{+}(x-l_{3})}-({\alpha}-{\beta})e^{ik_{2}^{-}(x-l_{3})}\right)e^{-i(w_{0}-w_{s})t}
 \end{pmatrix}
 \end{align}
+
 領域Ⅶでは両成分とも波数
 \begin{align}
 k_{0}-w_{z}/v
@@ -381,22 +399,24 @@ k_{0}-w_{z}/v
 \end{align}
 ここで、
 \begin{align}
-\frac{{{\hbar}^2}{k_{n}^{\pm}}^2}{2m}{\pm}{\hbar}w_{r}={\hbar}w_{n}
+\frac{{k_{n}^{\pm}}^2}{2m}{\pm}w_{r}=w_{n}
 \end{align}
 により、
 \begin{align}
-\frac{{{\hbar}^2}{k_{2}^{\pm}}^2}{2m}{\pm}{\hbar}w_{r}={\hbar}w_{2}={\hbar}(w_{0}-w_{s}/2)={\hbar}(w_{0}-w_{z})
+\frac{{k_{2}^{\pm}}^2}{2m}{\pm}w_{r}=w_{2}=w_{0}-w_{s}/2=w_{0}-w_{z}
 \end{align}
 \begin{align}
 k_{2}^{\pm}{\simeq}k_{0}-\frac{w_{z}{\pm}w_{r}}{v}
 \end{align}
 よって
 \begin{align}
-|({\psi}_{Ⅶ}(x,t))_{+}|^2=&\frac{1}{4}\left|({\alpha}+{\beta})e^{-iw_{r}/v(l_{4}-l_{3})}+({\alpha}-{\beta})e^{iw_{r}/v(l_{4}-l_{3})}\right|^2\\
-=&\left|{\alpha}\cos\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)-i{\beta}\sin\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)\right|^2\\
-=&\left|e^{i(k_{0}-w_{z}/v)(l_{2}-l_{1})}\cos\left(\frac{w_{r}}{v}d\right)\cos\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)-e^{i(k_{0}+(w-w_{s})/v)(l_{2}-l_{1})}\sin\left(\frac{w_{r}}{v}d\right)\sin\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)\right|^2
+|({\psi}_{Ⅶ}(x,t))_{+}|^2 \notag
+=&\frac{1}{4}\left|({\alpha}+{\beta})e^{-iw_{r}/v(l_{4}-l_{3})}+({\alpha}-{\beta})e^{iw_{r}/v(l_{4}-l_{3})}\right|^2\\ \notag
+=&\left|{\alpha}\cos\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)-i{\beta}\sin\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)\right|^2\\ \notag
+=&\left|e^{i(k_{0}-w/v)(l_{2}-l_{1})}\cos\left(\frac{w_{r}}{v}d\right)\cos\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)\right. \\
+\left. +e^{i(k_{0}+(w-w_{s})/v)(l_{2}-l_{1})}\sin\left(\frac{w_{r}}{v}d\right)\sin\left(\frac{w_{r}}{v}(l_{4}-l_{3})\right)\right|^2
 \end{align}
-
+$ゆえに、領域Ⅳにおける磁場Bの大きさを変えながらビームの下流でスピン上成分の粒子の数を測定すると、干渉が観測できる。$
 
 
 
