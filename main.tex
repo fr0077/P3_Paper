@@ -44,7 +44,7 @@
 
 %文字の色を変える
 %\textcolor{red}{text}など。
-\usepackage{color}
+\usepackage[dvipdfmx]{color} %jpg,png画像などの読み込みには(理由はわからんけど)dvipdfmxオプションが必要。
 
 %urlをそのまま記載できる
 %\url{http://www.....}
@@ -79,6 +79,10 @@
 %化学式
 %\ce{^3He},\ce{Na2SO3}
 \usepackage[version=3]{mhchem}
+
+%1つのキャプションに対して複数のサブキャプションをつける
+%\includegraphics{figure1.pdf} \subcaption{caption1} includegraphics{figure2.pdf} \subcaption{caption2} \caption{caption}
+\usepackage{subcaption}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
