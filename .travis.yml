@@ -1,4 +1,4 @@
-# ここに自動テストを記述します。
+﻿# ここに自動テストを記述します。
 # 今回はTeXなので、コンパイルが通ればテストに合格、通らなければ失敗します。
 
 notifications:
@@ -20,5 +20,5 @@ install:
 
 # ここからテスト開始
 script:
-  - ptex2pdf -u -l -ot -interaction=batchmode main.tex
+  - ptex2pdf -u -l main.tex
   - upbibtex main
