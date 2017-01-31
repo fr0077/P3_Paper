@@ -17,6 +17,7 @@ install:
   - tlmgr install boondox
   - tlmgr install newtx
   - tlmgr install newpx
+  - tlmgr install mhchem chemgreek
 
 # ここからテスト開始
 script:
