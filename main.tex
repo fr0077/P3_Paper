@@ -46,7 +46,7 @@
 
 %文字の色を変える
 %\textcolor{red}{text}など。
-\usepackage{color}
+\usepackage[dvipdfmx]{color} %jpg,png画像などの読み込みにはdvipdfmxオプションが必要。
 
 %urlをそのまま記載できる
 %\url{http://www.....}
@@ -77,6 +77,14 @@
 %花文字
 %\mathscr{A}
 \usepackage{mathrsfs}
+
+%化学式
+%\ce{^3He},\ce{Na2SO3}
+\usepackage[version=3]{mhchem}
+
+%1つのキャプションに対して複数のサブキャプションをつける
+%\includegraphics{figure1.pdf} \subcaption{caption1} includegraphics{figure2.pdf} \subcaption{caption2} \caption{caption}
+\usepackage{subcaption}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
@@ -138,6 +146,8 @@
 %ここで文書をincludeします
 \include{mirror/mirror}
 \include{pi2flipper/pi2flipper}
+\include{detector/detector2}
+
 \bibliographystyle{jplain}
 \bibliography{bibliography}
 \end{document}
