@@ -542,9 +542,9 @@ $
 すなわち次のようにして、実験的にスピンフリッパーの共鳴を実現することができる。
 \begin{enumerate}
 \item スピンフリッパーにスピン上向き中性子を入射し、フリッパーの後ろでスピン上向き成分のみを観測する。
-\item 共鳴条件が満たされていないと、ある速度の中性子については計数率をより下げることができる。
-\item 共鳴条件が満たされていると、$\pi$フリップ条件を満たす速度の中性子についてはスピンが完全に反転するため、その速度の中性子の計数率は理想的にはゼロとなる。
-\item 共鳴条件に関するパラメータを調節しながら中性子計数率が最小となるポイントを探す。
+\item 共鳴条件が満たされていないと、ある速度の中性子についてはカウントをより減らすことができる。
+\item 共鳴条件が満たされていると、$\pi$フリップ条件を満たす速度の中性子についてはスピンが完全に反転するため、その速度の中性子のカウントは最小となる。
+\item カウント分布を見ながら共鳴条件に関するパラメータを調節し、カウントが最小となるところを探す。
 \end{enumerate}
 
 
@@ -677,45 +677,190 @@ $37.9\,\mathrm{kHz}$&$1.4 \,\mathrm{V_{pp}}$&$0\,\mathrm{A}$
 実際に共鳴実験で得られたデータを以下に示す。上流フリッパー共鳴実験で周波数を$\omega_s/2\pi=34.0,36.0,37.0,37.9,38.8,40.0,41.0$kHzと変えたとき、それぞれの場合に得られた粒子数の波長分布を図\ref{Resonance_fig_Flipper1_RawCounts}に、下流フリッパー共鳴実験でガイド磁場補正用コイル電流を$I_c=-2.0,-1.0,-0.5,0,0.1,0.3,0.5,1.0,2.0$Aと変えたとき、それぞれの場合に得られた粒子数の波長分布を図\ref{Resonance_fig_Flipper2_RawCounts}に表す。
 
 \begin{figure}[h]
-\begin{minipage}{0.49\hsize}
-\centering
+%\begin{minipage}{0.49\hsize}
+%\centering
 \includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_340kHz.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_360kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_360kHz.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_370kHz.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_379kHz.pdf}
-\end{minipage}
-\begin{minipage}{0.49\hsize}
-\centering
+\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_379kHz.pdf}\\
+%\end{minipage}
+%\begin{minipage}{0.49\hsize}
+%\centering
 \includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_388kHz.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_400kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_400kHz.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper1_RawCounts_410kHz.pdf}
-\vspace{4.3cm}
-\end{minipage}
+%\vspace{4.3cm}
+%\end{minipage}
 \caption{上流フリッパー共鳴実験で得られた粒子数の波長分布}\label{Resonance_fig_Flipper1_RawCounts}
 \end{figure}
 
 \begin{figure}[h]
-\begin{minipage}{0.5\hsize}
-\centering
+%\begin{minipage}{0.5\hsize}
+%\centering
 \includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_-20A.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_-10A.pdf}
+\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_-10A.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_-5A.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_0A.pdf}
+\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_0A.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_1A.pdf}
-\end{minipage}
-\begin{minipage}{0.5\hsize}
-\centering
-\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_3A.pdf}
+%\end{minipage}
+%\begin{minipage}{0.5\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_3A.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_5A.pdf}
-\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_10A.pdf}
+\includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_10A.pdf}\\
 \includegraphics[height=4.3cm]{resonance/results/Flipper2_RawCounts_20A.pdf}
-\vspace{4.3cm}
-\end{minipage}
+%\vspace{4.3cm}
+%\end{minipage}
 \caption{下流フリッパー共鳴実験で得られた粒子数の波長分布}\label{Resonance_fig_Flipper2_RawCounts}
 \end{figure}
 
 \clearpage
 \subsection{分析}
+以下では
+\begin{enumerate}
+\item 上流フリッパーについてデータから共鳴条件を満たす$\omega_s$を決め、グラフから共鳴時に最もよくスピン反転する中性子の波長を推定し、$\pi$フリップ条件から$\omega_r$を計算する。
+\item 上流フリッパーについてデータから共鳴条件を満たす$I_c$を決め、グラフから共鳴時に最もよくスピン反転する中性子の波長を推定し、$\pi$フリップ条件から$\omega_r$を計算する。
+\end{enumerate}
+という流れでデータの分析を行う。
 
+\paragraph{上流フリッパーに関する分析}
+共鳴しているかを知るにはパラメータを変えたときの検出粒子数を比較すればよく、ある波長でカウントが最小となるとき共鳴していると考えてよい。しかし前節で示したデータは測定時間や加速器の出力がそれぞれ異なるので、そのままでは互いに比較することができない。そこで測定データのカウントをそのデータの測定開始時刻から測定終了時刻までにおけるLiMのカウントで割って規格化することで、データを互いに比較できるようにする。このようにして規格化した上流フリッパー共鳴実験における粒子数の波長分布を、フリッパーをOFFにしたときの規格化粒子数と共に、図\ref{Resonance_fig_Flipper1_NormalizedCounts}に表す。
 
+\begin{figure}[h]
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_340kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_360kHz.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_370kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_379kHz.pdf}\\
+%\end{minipage}
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_388kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_400kHz.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_NormalizedCounts_410kHz.pdf}
+%\vspace{4.3cm}
+%\end{minipage}
+\caption{上流フリッパー共鳴実験における規格化粒子数の波長分布}\label{Resonance_fig_Flipper1_NormalizedCounts}
+\end{figure}
 
+さらに、図\ref{Resonance_fig_Flipper1_CountsRate}にフリッパーONのときの規格化粒子数をフリッパーOFFのときの規格化粒子数で割ったもの、すなわち上流フリッパーでスピン反転しなかった割合の波長分布を表す。図\ref{Resonance_fig_Flipper1_CountsRate}を見ると、波長$\lambda=$3.0{\AA}から4.5{\AA}あたりで大きく凹んでいることがわかる。
+\begin{figure}[h]
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_340kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_360kHz.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_370kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_379kHz.pdf}\\
+%\end{minipage}
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_388kHz.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_400kHz.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper1_CountsRate_410kHz.pdf}
+%\vspace{4.3cm}
+%\end{minipage}
+\caption{上流フリッパーにおいてスピン反転しなかった割合}\label{Resonance_fig_Flipper1_CountsRate}
+\end{figure}
+
+そこで、図\ref{Resonance_fig_Flipper1_NormalizedCounts}の波長領域$\lambda=$3.0{\AA}から4.5{\AA}における規格化粒子数の和を$\omega_s/2\pi$を横軸に取って図示すると図\ref{Resonance_fig_Flipper1_Freq}のようになる。2次関数でフィッティングした結果、最もカウントが少なくなる、すなわち共鳴条件を満たす$\omega_s$として$\omega_s/2\pi=38.0\pm0.1$kHzと決まった。
+\begin{comment}
+\begin{table}[h]
+\centering
+\begin{tabular}{c|lllllll}
+$\omega_s/2\pi$&34.0&36.0&37.0&37.9&38.8&40.0&41.0\\
+$3.0{\AA}-4.5{\AA}での規格化粒子数($\times 10^{-4}$)&$17.8\pm0.8$&18.4\pm
+\end{comment}
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{resonance/analysis/Flipper1_Freq_30-45.pdf}
+\caption{$\omega_s/2\pi$に対する波長$\lambda=$3.0{\AA}から4.5{\AA}における規格化粒子数}\label{Resonance_fig_Flipper1_Freq}
+\end{figure}
+
+次に、決まった$\omega_s$と最も近い$\omega_s/2\pi=37.9$kHzのときのスピン反転しなかった割合の波長分布(図\ref{Resonance_fig_Flipper1_CountsRate_379fit})から、最も反転しない割合が低い、すなわち最も反転する波長を推定すると、2次関数フィットの結果、$\lambda=3.78\pm0.05${\AA}と求まった。これを速度に直すと$v=1046\pm14$m/sとなり、この速度が$\pi$フリップ条件を満たすことから$\omega_{r1}/2\pi=8.7\pm0.1$kHzと計算される。
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{resonance/analysis/Flipper1_CountsRate_379kHz_fit.pdf}
+\caption{$\omega_s/2\pi$=37.9kHzのときのスピン反転しなかった割合の波長分布}\label{Resonance_fig_Flipper1_CountsRate_379fit}
+\end{figure}
+
+\paragraph{下流フリッパーに関する分析}
+上流フリッパー同様に下流フリッパーの測定データについても互いに比較するために、測定時間のLiMカウントで規格化を行う。その結果を図\ref{Resonance_fig_Flipper2_NormalizedCounts}に表す。
+\begin{figure}[h]
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_-20A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_-10A.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_-5A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_0A.pdf}\\
+%\end{minipage}
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_1A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_3A.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_5A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_10A.pdf}\\
+%\vspace{4.3cm}
+%\end{minipage}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_20A.pdf}
+\caption{下流フリッパー共鳴実験における規格化粒子数の波長分布}\label{Resonance_fig_Flipper1_NormalizedCounts}
+\end{figure}
+
+さらに、図\ref{Resonance_fig_Flipper2_CountsRate}にフリッパーONのときの規格化粒子数をフリッパーOFFのときの規格化粒子数で割ったもの、すなわち上流フリッパーでスピン反転しなかった割合の波長分布を表す。図\ref{Resonance_fig_Flipper2_CountsRate}を見ると、波長$\lambda=$2.7{\AA}から4.2{\AA}あたりで大きく凹んでいることがわかる。
+\begin{figure}[h]
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_-20A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_-10A.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_-5A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_0A.pdf}\\
+%\end{minipage}
+%\begin{minipage}{0.49\hsize}
+%\centering
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_1A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_3A.pdf}\\
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_5A.pdf}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_10A.pdf}\\
+%\vspace{4.3cm}
+%\end{minipage}
+\includegraphics[height=4.3cm]{resonance/analysis/Flipper2_CountsRate_20A.pdf}
+\caption{下流フリッパーにおいてスピン反転しなかった割合}\label{Resonance_fig_Flipper2_CountsRate}
+\end{figure}
+
+そこで、図\ref{Resonance_fig_Flipper2_NormalizedCounts}の波長領域$\lambda=$2.7{\AA}から4.2{\AA}における規格化粒子数を数え、$I_c$を横軸として図示すると図\ref{Resonance_fig_Flipper2_Cur}のようになる。2次関数でフィッティングした結果、最もカウントが少なくなる、すなわち共鳴条件を満たす$I_c$として$I_c=0.35\pm0.3$Aと決まった。
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{resonance/analysis/Flipper2_Cur_27-42.pdf}
+\caption{$I_c$に対する波長$\lambda=$2.7{\AA}から4.2{\AA}における規格化粒子数}\label{Resonance_fig_Flipper2_Cur}
+\end{figure}
+
+次に、決まった$I_c$の中心値と最も近い$I_c=0.3$Aのときのスピン反転しなかった割合の波長分布(図\ref{Resonance_fig_Flipper2_CountsRate_3fit})から、最も反転しない割合が低い、すなわち最も反転する波長を推定すると、2次関数フィットの結果、$\lambda=3.48\pm0.05${\AA}と求まった。これを速度に直すと$v=1136\pm16$m/sとなり、この速度が$\pi$フリップ条件を満たすことから$\omega_{r2}/2\pi=9.5\pm0.1$kHzと計算される。
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{resonance/analysis/Flipper2_CountsRate_3A_fit.pdf}
+\caption{$I_c$=0.3Aのときのスピン反転しなかった割合の波長分布}\label{Resonance_fig_Flipper2_CountsRate_3fit}
+\end{figure}
+
+\clearpage
+\paragraph{分析まとめ}
+以上の分析から各パラメータは次のように決まった。
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|} \hline
+$\omega_s/2\pi$&$38.0\pm0.1$kHz\\ \hline
+$I_c$&$0.35\pm0.3$A \\ \hline
+$\omega_{r1}/2\pi$&$8.7\pm0.1$kHz \\ \hline
+$\omega_{r2}/2\pi$&$9.5\pm0.1$kHz \\ \hline
+\end{tabular}
+\end{table}
+
+しかし、実験中の粗い解析では$\omega_s/2\pi=37.5\pm0.1$kHz,$I_c=0.185\pm0.11$Aと求まったため、実際には以後、
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|} \hline
+$\omega_s/2\pi$&37.5kHz\\ \hline
+$I_c$&0.185A \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent として実験を進めた。このことによる共鳴条件からのずれは共に$\epsilon/\omega_z=$0.01$\sim$0.02程度であり、十分小さいといえる(図\ref{Resonance_fig_visivility},\ref{Resonance_fig__interference}参照)。
