@@ -23,6 +23,7 @@ e^{ik_{0}x}e^{-i\omega_{0}t}
 \end{align}
 と仮定する。このとき、各領域の境界における反射波は無視できる。
 \subsection{詳細な計算}
+\paragraph{領域Ⅱにおけるスピンのフリップ}
 領域Ⅱにおける磁場は
 \begin{align}
 \bm{B}=2B_{r}\cos(\omega_{s}t)\bm{\hat{x}}+B_{z}\bm{\hat{z}}
@@ -40,7 +41,7 @@ e^{ik_{0}x}e^{-i\omega_{0}t}
 \end{align}
 とする。この時、領域Ⅱにおけるシュレディンガー方程式は
 \begin{align}
-i\frac{\partial {\psi}_{Ⅱ}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+\omega_{r}\cos(\omega_{s}t){\sigma}_{x}+\omega_{r}\sin(\omega_{s}t){\sigma}_{y}+{\hbar}\omega_{z}{\sigma}_{z}\right){\psi}_{Ⅱ}(x,t)
+i\frac{\partial {\psi}_{Ⅱ}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+\omega_{r}\cos(\omega_{s}t){\sigma}_{x}+\omega_{r}\sin(\omega_{s}t){\sigma}_{y}+\omega_{z}{\sigma}_{z}\right){\psi}_{Ⅱ}(x,t)
 \end{align}
 と書ける。ここで、
 \begin{align}
@@ -87,7 +88,7 @@ i\frac{\partial {\psi}_{R}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2
 \end{align}
 いま、
 \begin{align}
-U_{D}=\exp(i{\pi}{\sigma}_{y}/4)=
+U_{x_{1}}=\exp(i{\pi}{\sigma}_{y}/4)=
 \begin{pmatrix}
 1/\sqrt{2} &1/\sqrt{2} \\
 -1/\sqrt{2} &1/\sqrt{2}
@@ -95,19 +96,19 @@ U_{D}=\exp(i{\pi}{\sigma}_{y}/4)=
 \end{align}
 というユニタリー変換を用いると、
 \begin{align}
-U_{D}{\sigma}_{x}U_{D}^{\dagger}={\sigma}_{z}
+U_{x_{1}}{\sigma}_{x}U_{x_{1}}^{\dagger}={\sigma}_{z}
 \end{align}
 が成り立つ。
 \begin{align}
-{\psi}_{D}(x,t)=U_{D}{\psi}_{R}(x,t)
+{\psi}_{x_{1}}(x,t)=U_{x_{1}}{\psi}_{R}(x,t)
 \end{align}
-$とすると、{\psi}_{D}(x,t)の満たすシュレーディンガー方程式は$
+$とすると、{\psi}_{x_{1}}(x,t)の満たすシュレーディンガー方程式は$
 \begin{align}
-i\frac{\partial {\psi}_{D}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+\omega_{r}{\sigma}_{z}\right){\psi}_{D}(x,t)
+i\frac{\partial {\psi}_{x_{1}}(x,t)}{\partial t}=\left(-\frac{1}{2m}\frac{\partial^2}{\partial x^2}+\omega_{r}{\sigma}_{z}\right){\psi}_{x_{1}}(x,t)
 \end{align}
 $この方程式の解のうち、エネルギー固有値がE_{n}=\omega_{n}であるものは$
 \begin{align}
-{\psi}_{D}(x,t) =
+{\psi}_{x_{1}}(x,t) =
 \begin{pmatrix}
 A_{n}^{+}e^{ik_{n}^{+}x}  \\
 A_{n}^{-}e^{ik_{n}^{-}x}
@@ -120,7 +121,7 @@ e^{-i\omega_{n}t}
 \end{align}
 が成り立つ。ゆえに、領域Ⅱにおける波動関数は
 \begin{align}
-{\psi}_{Ⅱ}(x,t)=U_{T}^{\dagger}U_{D}^{\dagger}{\psi}_{D}(x,t)=\frac{1}{\sqrt{2}}
+{\psi}_{Ⅱ}(x,t)=U_{T}^{\dagger}U_{x_{1}}^{\dagger}{\psi}_{x_{1}}(x,t)=\frac{1}{\sqrt{2}}
 \begin{pmatrix}
 \left(A_{n}^{+}e^{ik_{n}^{+}x}+A_{n}^{-}e^{ik_{n}^{-}x}\right)e^{-i(\omega_{n}+\omega_{z})t} \\
 \left(A_{n}^{+}e^{ik_{n}^{+}x}-A_{n}^{-}e^{ik_{n}^{-}x}\right)e^{-i(\omega_{n}-\omega_{z})t}
@@ -128,7 +129,7 @@ e^{-i\omega_{n}t}
 \end{align}
 $ここで、1/{\sqrt{2}}A_{n}^{\pm}をA_{n}^{\pm}と取り直すと、$
 \begin{align}
-{\psi}_{Ⅱ}(x,t)=U_{T}^{\dagger}U_{D}^{\dagger}{\psi}_{D}(x,t)=
+{\psi}_{Ⅱ}(x,t)=U_{T}^{\dagger}U_{x_{1}}^{\dagger}{\psi}_{x_{1}}(x,t)=
 \begin{pmatrix}
 \left(A_{n}^{+}e^{ik_{n}^{+}x}+A_{n}^{-}e^{ik_{n}^{-}x}\right)e^{-i(\omega_{n}+\omega_{z})t} \\
 \left(A_{n}^{+}e^{ik_{n}^{+}x}-A_{n}^{-}e^{ik_{n}^{-}x}\right)e^{-i(\omega_{n}-\omega_{z})t}
@@ -149,10 +150,8 @@ $とする。ここで、v={k_{0}}/{m}であり、$
 \end{align}
 $が成り立つ。x=0における接続条件により、以下の2つの式が任意のtについて成り立つ。$
 \begin{align}
-e^{-i\omega_{0}t}=\left(A_{n}^{+}+A_{n}^{-}\right)e^{-i(\omega_{n}+\omega_{z})t}
-\end{align}
-\begin{align}
-0=\left(A_{n}^{+}-A_{n}^{-}\right)e^{-i(\omega_{n}-\omega_{z})t}
+e^{-i\omega_{0}t}&=\left(A_{n}^{+}+A_{n}^{-}\right)e^{-i(\omega_{n}+\omega_{z})t} \\
+0&=\left(A_{n}^{+}-A_{n}^{-}\right)e^{-i(\omega_{n}-\omega_{z})t}
 \end{align}
 これにより、
 \begin{align}
@@ -169,8 +168,6 @@ A_{n}^{+}=B_{n}^{+}=A_{n}^{-}=B_{n}^{-}=0
 $を満たすnを1とすると、$
 \begin{align}
 1=A_{1}^{+}+A_{1}^{-}
-\end{align}
-\begin{align}
 0=A_{1}^{+}-A_{1}^{-}
 \end{align}
 が成り立つ。ゆえに、
@@ -180,11 +177,11 @@ A_{1}^{+}=A_{1}^{-}=\frac{1}{2}
 よって、
 \begin{align}
 {\psi}_{Ⅱ}(x,t) 
-=&\begin{pmatrix}
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{ik_{1}^{+}x}+e^{ik_{1}^{-}x}\right)e^{-i(\omega_{1}+\omega_{z})t} \\
 \frac{1}{2}\left(e^{ik_{1}^{+}x}-e^{ik_{1}^{-}x}\right)e^{-i(\omega_{1}-\omega_{z})t}
-\end{pmatrix}
-=&\begin{pmatrix}
+\end{pmatrix} \notag \\
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{ik_{1}^{+}x}+e^{ik_{1}^{-}x}\right)e^{-i\omega_{0}t} \\
 \frac{1}{2}\left(e^{ik_{1}^{+}x}-e^{ik_{1}^{-}x}\right)e^{-i(\omega_{0}-2\omega_{z})t}
 \end{pmatrix}
@@ -200,11 +197,11 @@ k_{1}^{\pm}{\simeq}k_{0}-\frac{\omega_{z}}{v}{\mp}\frac{\omega_{r}}{v}
 が成り立つので
 \begin{align}
 {\psi}_{Ⅱ}(x,t) 
-=&\begin{pmatrix}
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{-i{\omega_{r}}x/v}+e^{i{\omega_{r}}x/v}\right)e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
 \frac{1}{2}\left(e^{-i{\omega_{r}}x/v}-e^{i{\omega_{r}}x/v}\right)e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-2\omega_{z})t}
-\end{pmatrix}
-=&\begin{pmatrix}
+\end{pmatrix} \notag \\
+&=\begin{pmatrix}
 \cos({{\omega_{r}}x/v}) \\
 -i\sin({{\omega_{r}}x/v})e^{2i\omega_{z}t}
 \end{pmatrix}
@@ -223,12 +220,10 @@ e^{-i\omega_{n}t}
 \begin{align}
 \frac{{K_{n}^{\pm}}^2}{2m}{\pm}\omega_{z}=\omega_{n}
 \end{align}
-$が成り立つ。x=dにおける接続より、以下の2つの式が任意のtについて成り立つ。$
+$が成り立つ。x=x_{1}における接続より、以下の2つの式が任意のtについて成り立つ。$
 \begin{align}
-C_{n}^{+}e^{iK_{n}^{+}d}e^{-i\omega_{n}t}=\cos({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)d}e^{-i\omega_{0}t}
-\end{align}
-\begin{align}
-C_{n}^{-}e^{iK_{n}^{-}d}e^{-i\omega_{n}t}=-i\sin({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)d}e^{-i(\omega_{0}-2\omega_{z})t}
+C_{n}^{+}e^{iK_{n}^{+}x_{1}}e^{-i\omega_{n}t}&=\cos({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x_{1}}e^{-i\omega_{0}t} \\
+C_{n}^{-}e^{iK_{n}^{-}x_{1}}e^{-i\omega_{n}t}&=-i\sin({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x_{1}}e^{-i(\omega_{0}-2\omega_{z})t}
 \end{align}
 $いま、\omega_{n}=\omega_{0}でも\omega_{n}=\omega_{0}-2\omega_{z}でもないnについては$
 \begin{align}
@@ -240,10 +235,8 @@ C_{n}^{+}=C_{n}^{-}=0
 \end{align}
 $とすると、残るのはnが0と2だけで、n=0については$
 \begin{align}
-C_{0}^{+}e^{iK_{0}^{+}d}e^{-i\omega_{0}t}=\cos({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)d}e^{-i\omega_{0}t}
-\end{align}
-\begin{align}
-C_{0}^{-}e^{iK_{0}^{-}d}e^{-i\omega_{0}t}=0
+C_{0}^{+}e^{iK_{0}^{+}x_{1}}e^{-i\omega_{0}t}&=\cos({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x_{1}}e^{-i\omega_{0}t} \\
+C_{0}^{-}e^{iK_{0}^{-}x_{1}}e^{-i\omega_{0}t}&=0
 \end{align}
 ここで
 \begin{align}
@@ -255,15 +248,13 @@ K_{0}^{\pm}{\simeq}k_{0}{\mp}\frac{\omega_{z}}{v}
 \end{align}
 ゆえに
 \begin{align}
-C_{0}^{+}=\cos({{\omega_{r}}d/v}) \\
-C_{0}^{-}=0
+C_{0}^{+}&=\cos({{\omega_{r}}x_{1}/v}) \\
+C_{0}^{-}&=0
 \end{align}
 $n=2については$
 \begin{align}
-C_{2}^{+}e^{iK_{2}^{+}d}e^{-i\omega_{2}t}=0
-\end{align}
-\begin{align}
-C_{2}^{-}e^{iK_{2}^{-}d}e^{-i\omega_{2}t}=-i\sin({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)d}e^{-i(\omega_{0}-2\omega_{z})t}
+C_{2}^{+}e^{iK_{2}^{+}x_{1}}e^{-i\omega_{2}t}&=0 \\
+C_{2}^{-}e^{iK_{2}^{-}x_{1}}e^{-i\omega_{2}t}&=-i\sin({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x_{1}}e^{-i(\omega_{0}-2\omega_{z})t}
 \end{align}
 ここで
 \begin{align}
@@ -275,29 +266,29 @@ K_{2}^{\pm}{\simeq}k_{0}-\frac{2\omega_{z}}{v}{\mp}\frac{\omega_{z}}{v}
 \end{align}
 ゆえに
 \begin{align}
-C_{2}^{+}=0 \\
-C_{2}^{-}=-i\sin({{\omega_{r}}d/v})
+C_{2}^{+}&=0 \\
+C_{2}^{-}&=-i\sin({{\omega_{r}}x_{1}/v})
 \end{align}
 透過波はこれらを重ね合わせた
 \begin{align}
 {\psi}_{Ⅲ}(x,t)&=
 \begin{pmatrix}
-\cos({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x} \\
+\cos({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x} \\
 0
 \end{pmatrix}
 e^{-i\omega_{0}t}+
 \begin{pmatrix}
 0 \\
--i\sin({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x}
+-i\sin({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x}
 \end{pmatrix}
-e^{-i\omega_{2}t} \\
+e^{-i\omega_{2}t} \notag \\
 &=\begin{pmatrix}
-\cos({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
--i\sin({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-2\omega_{z})t}
-\end{pmatrix} \\
+\cos({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
+-i\sin({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-2\omega_{z})t}
+\end{pmatrix} \notag \\
 &=\begin{pmatrix}
-\cos({{\omega_{r}}d/v}) \\
--i\sin({{\omega_{r}}d/v})e^{2i\omega_{z}t}
+\cos({{\omega_{r}}x_{1}/v}) \\
+-i\sin({{\omega_{r}}x_{1}/v})e^{2i\omega_{z}t}
 \end{pmatrix} 
 e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 \end{align}
@@ -314,10 +305,8 @@ e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-2\omega_{z})t}
 である場合を考える。
 $x=0における接続条件により、以下の2つの式が任意のtについて成り立つ。$
 \begin{align}
-0=\left(A_{n}^{+}+A_{n}^{-}\right)e^{-i(\omega_{n}+\omega_{z})t}
-\end{align}
-\begin{align}
-e^{-i(\omega_{0}-2\omega_{z})t}=\left(A_{n}^{+}-A_{n}^{-}\right)e^{-i(\omega_{n}-\omega_{z})t}
+0&=\left(A_{n}^{+}+A_{n}^{-}\right)e^{-i(\omega_{n}+\omega_{z})t} \\
+e^{-i(\omega_{0}-2\omega_{z})t}&=\left(A_{n}^{+}-A_{n}^{-}\right)e^{-i(\omega_{n}-\omega_{z})t}
 \end{align}
 ここで
 \begin{align}
@@ -325,10 +314,8 @@ e^{-i(\omega_{0}-2\omega_{z})t}=\left(A_{n}^{+}-A_{n}^{-}\right)e^{-i(\omega_{n}
 \end{align}
 $とすると、残るのはn=3だけで$
 \begin{align}
-0=A_{3}^{+}+A_{3}^{-}
-\end{align}
-\begin{align}
-e^{-i(\omega_{0}-2\omega_{z})t}=\left(A_{3}^{+}-A_{3}^{-}\right)e^{-i(\omega_{0}-2\omega_{z})t}
+0&=A_{3}^{+}+A_{3}^{-} \\
+e^{-i(\omega_{0}-2\omega_{z})t}&=\left(A_{3}^{+}-A_{3}^{-}\right)e^{-i(\omega_{0}-2\omega_{z})t}
 \end{align}
 ゆえに
 \begin{align}
@@ -336,14 +323,13 @@ A_{3}^{+}=\frac{1}{2} \\
 A_{3}^{-}=-\frac{1}{2}
 \end{align}
 この時
-
 \begin{align}
 {\psi}_{Ⅱ}(x,t) 
-=&\begin{pmatrix}
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{ik_{3}^{+}x}-e^{ik_{3}^{-}x}\right)e^{-i(\omega_{3}+\omega_{z})t} \\
 \frac{1}{2}\left(e^{ik_{3}^{+}x}+e^{ik_{3}^{-}x}\right)e^{-i(\omega_{3}-\omega_{z})t}
-\end{pmatrix}
-=&\begin{pmatrix}
+\end{pmatrix} \notag \\
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{ik_{3}^{+}x}-e^{ik_{3}^{-}x}\right)e^{-i\omega_{0}t} \\
 \frac{1}{2}\left(e^{ik_{3}^{+}x}+e^{ik_{3}^{-}x}\right)e^{-i(\omega_{0}-2\omega_{z})t}
 \end{pmatrix}
@@ -359,11 +345,11 @@ k_{3}^{\pm}{\simeq}k_{0}-\frac{\omega_{z}}{v}{\mp}\frac{\omega_{r}}{v}
 が成り立つので
 \begin{align}
 {\psi}_{Ⅱ}(x,t) 
-=&\begin{pmatrix}
+&=\begin{pmatrix}
 \frac{1}{2}\left(e^{-i{\omega_{r}}x/v}-e^{i{\omega_{r}}x/v}\right)e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
 \frac{1}{2}\left(e^{-i{\omega_{r}}x/v}+e^{i{\omega_{r}}x/v}\right)e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-\omega_{s})t}
-\end{pmatrix}
-=&\begin{pmatrix}
+\end{pmatrix} \notag \\
+&=\begin{pmatrix}
 -i\sin({{\omega_{r}}x/v}) \\
 \cos({{\omega_{r}}x/v})e^{2i\omega_{z}t}
 \end{pmatrix}
@@ -373,12 +359,12 @@ e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 \begin{align}
 {\psi}_{Ⅲ}(x,t) 
 &=\begin{pmatrix}
--i\sin({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
-\cos({{\omega_{r}}d/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-\omega_{s})t}
-\end{pmatrix}
+-i\sin({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} \\
+\cos({{\omega_{r}}x_{1}/v})e^{i(k_{0}-\omega_{z}/v)x}e^{-i(\omega_{0}-\omega_{s})t}
+\end{pmatrix} \notag \\
 &=\begin{pmatrix}
--i\sin({{\omega_{r}}d/v}) \\
-\cos({{\omega_{r}}d/v})e^{2i\omega_{z})t}
+-i\sin({{\omega_{r}}x_{1}/v}) \\
+\cos({{\omega_{r}}x_{1}/v})e^{2i\omega_{z})t}
 \end{pmatrix}
 e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 \end{align}
@@ -396,8 +382,8 @@ e^{i(k_{0}-\omega_{z}/v)x}
 {\psi}_{Ⅲ}(x,t) 
 =
 \begin{pmatrix}
-\cos({{\omega_{r}}d/v}) &-i\sin({{\omega_{r}}d/v})e^{-2i\omega_{z}t} \\
--i\sin({{\omega_{r}}d/v})e^{2i\omega_{z}t} &\cos({{\omega_{r}}d/v})
+\cos({{\omega_{r}}x_{1}/v}) &-i\sin({{\omega_{r}}x_{1}/v})e^{-2i\omega_{z}t} \\
+-i\sin({{\omega_{r}}x_{1}/v})e^{2i\omega_{z}t} &\cos({{\omega_{r}}x_{1}/v})
 \end{pmatrix}\begin{pmatrix}
 {\alpha}e^{-i\omega_{0}t} \\
 {\beta}e^{-i(\omega_{0}-2\omega_{z})t}
@@ -418,8 +404,8 @@ e^{ik_{0}x}e^{-i\omega_{0}t}
 \begin{align}
 {\psi}_{Ⅲ}(x,t)=
 \begin{pmatrix}
-\cos({{\omega_{r}}d/v}) \\
--i\sin({{\omega_{r}}d/v})e^{2i\omega_{z}t}
+\cos({{\omega_{r}}x_{1}/v}) \\
+-i\sin({{\omega_{r}}x_{1}/v})e^{2i\omega_{z}t}
 \end{pmatrix}
 e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 \end{align}
@@ -428,13 +414,13 @@ e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 
 
 
-
-$領域ⅢとⅣの境界x=l_{1}における波動関数は$
+\paragraph{領域Ⅳにおける位相のシフト}
+$領域ⅢとⅣの境界x=x_{2}における波動関数は$
 \begin{align}
-{\psi}_{Ⅲ}(x=l_{1},t)=
+{\psi}_{Ⅲ}(x=x_{2},t)=
 \begin{pmatrix}
-\cos(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{-i\omega_{0}t} \\
--i\sin(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{-i(\omega_{0}-\omega_{s})t}
+\cos(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{-i\omega_{0}t} \\
+-i\sin(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{-i(\omega_{0}-\omega_{s})t}
 \end{pmatrix}
 \end{align}
 $領域Ⅳにおける磁場をB=(\omega+\omega_{z})/{\mu}とすると、この領域ではスピン上成分が波数$
@@ -449,8 +435,8 @@ k_{0}+((\omega+\omega_{z})-\omega_{s})/v=k_{0}+(\omega-\omega_{z})/v
 \begin{align}
 {\psi}_{Ⅳ}(x,t)=
 \begin{pmatrix}
-\cos(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{i(k_{0}-(\omega+\omega_{z})/v)(x-l_{1})}e^{-i\omega_{0}t} \\
--i\sin(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{i(k_{0}+(\omega-\omega_{z})/v)(x-l_{1})}e^{-i(\omega_{0}-2\omega_{z})t}
+\cos(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{i(k_{0}-(\omega+\omega_{z})/v)(x-x_{2})}e^{-i\omega_{0}t} \\
+-i\sin(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{i(k_{0}+(\omega-\omega_{z})/v)(x-x_{2})}e^{-i(\omega_{0}-2\omega_{z})t}
 \end{pmatrix}
 \end{align}
 領域Ⅴでは、両成分とも波数
@@ -461,48 +447,51 @@ k_{0}-\omega_{z}/v
 \begin{align}
 {\psi}_{Ⅴ}(x,t)&=
 \begin{pmatrix}
-\cos(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{i(k_{0}-(\omega+\omega_{z})/v)(l_{2}-l_{1})}e^{i(k_{0}-\omega_{z}/v)(x-l_{2})}e^{-i\omega_{0}t} \\
--i\sin(\omega_{r}d/v)e^{i(k_{0}-\omega_{z}/v)l_{1}}e^{i(k_{0}+(\omega-\omega_{z})/v)(l_{2}-l_{1})}e^{i(k_{0}-\omega_{z}/v)(x-l_{2})}e^{-i(\omega_{0}-2\omega_{z})t}
-\end{pmatrix}   \\
+\cos(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{i(k_{0}-(\omega+\omega_{z})/v)(x_{3}-x_{2})}e^{i(k_{0}-\omega_{z}/v)(x-x_{3})}e^{-i\omega_{0}t} \\
+-i\sin(\omega_{r}x_{1}/v)e^{i(k_{0}-\omega_{z}/v)x_{2}}e^{i(k_{0}+(\omega-\omega_{z})/v)(x_{3}-x_{2})}e^{i(k_{0}-\omega_{z}/v)(x-x_{3})}e^{-i(\omega_{0}-2\omega_{z})t}
+\end{pmatrix}   \notag \\
 &=\begin{pmatrix}
-\cos(\omega_{r}d/v)e^{-i\omega/v(l_{2}-l_{1})}\\
--i\sin(\omega_{r}d/v)e^{i\omega/v(l_{2}-l_{1})}e^{2i\omega_{z}t}
+\cos(\omega_{r}x_{1}/v)e^{-i\omega/v(x_{3}-x_{2})}\\
+-i\sin(\omega_{r}x_{1}/v)e^{i\omega/v(x_{3}-x_{2})}e^{2i\omega_{z}t}
 \end{pmatrix}
 e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t} 
 \end{align}
+\paragraph{領域Ⅵにおけるスピンのフリップ}
 領域Ⅵにあるフリッパーを通過したときの透過波は、
 \begin{align}
 {\psi}_{Ⅶ}(x,t)
 &=
 \begin{pmatrix}
-\cos({{\omega_{r}}d/v}) &-i\sin({{\omega_{r}}d/v})e^{-2i\omega_{z}t} \\
--i\sin({{\omega_{r}}d/v})e^{2i\omega_{z}t} &\cos({{\omega_{r}}d/v})
+\cos({{\omega_{r}}x_{1}/v}) &-i\sin({{\omega_{r}}x_{1}/v})e^{-2i\omega_{z}t} \\
+-i\sin({{\omega_{r}}x_{1}/v})e^{2i\omega_{z}t} &\cos({{\omega_{r}}x_{1}/v})
 \end{pmatrix}
 \begin{pmatrix}
-\cos(\omega_{r}d/v)e^{-i\omega/v(l_{2}-l_{1})} \\
--i\sin(\omega_{r}d/v)e^{i\omega/v(l_{2}-l_{1})}e^{2i\omega_{z}t}
+\cos(\omega_{r}x_{1}/v)e^{-i\omega/v(x_{3}-x_{2})} \\
+-i\sin(\omega_{r}x_{1}/v)e^{i\omega/v(x_{3}-x_{2})}e^{2i\omega_{z}t}
 \end{pmatrix}
-e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}   \\
+e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}  \notag \\
 &= 
 \begin{pmatrix}
-\cos^{2}(\omega_{r}d/v)e^{-i\omega/v(l_{2}-l_{1})}-\sin^{2}(\omega_{r}d/v)e^{i\omega/v(l_{2}-l_{1})} \\
--i\cos({{\omega_{r}}d/v})\sin(\omega_{r}d/v)(e^{i\omega/v(l_{2}-l_{1})}+e^{-i\omega/v(l_{2}-l_{1})})e^{2i\omega_{z}t}
+\cos^{2}(\omega_{r}x_{1}/v)e^{-i\omega/v(x_{3}-x_{2})}-\sin^{2}(\omega_{r}x_{1}/v)e^{i\omega/v(x_{3}-x_{2})} \\
+-i\cos({{\omega_{r}}x_{1}/v})\sin(\omega_{r}x_{1}/v)(e^{i\omega/v(x_{3}-x_{2})}+e^{-i\omega/v(x_{3}-x_{2})})e^{2i\omega_{z}t}
 \end{pmatrix}
 e^{i(k_{0}-\omega_{z}/v)x}e^{-i\omega_{0}t}
 \end{align}
-
-$スピン上成分の絶対値の2乗はl_{2}-l_{1}=d'として、$
+\paragraph{干渉の確認}
+$最終的な状態のスピン上成分をみると、干渉が確認される。スピン上成分の絶対値の2乗はx_{1}=d,x_{3}-x_{2}=d'として、$
 \begin{align}
 |({\psi}_{Ⅶ}(x,t))_{+}|^2   
 &=\left|e^{-i\omega d'/v}\cos^2\left({\omega_{r}}d/v\right) -e^{i\omega d'/v}\sin^2\left({\omega_{r}}d/v\right)\right|^2 \notag \\
-&={\left(\cos\left({\omega}d/v'\right)\cos^2\left({\omega_{r}}d/v\right)-\cos\left({\omega}d/v'\right)\sin^2\left({\omega_{r}}d/v\right)\right)}^2 +{\left(\sin\left({\omega}d/v'\right)\cos^2\left({\omega_{r}}d/v\right)+\sin\left({\omega}d/v'\right)\sin^2\left({\omega_{r}}d/v\right)\right)}^2\notag \\
-&=\cos^4\left({\omega_{r}}d/v\right)+\sin^4\left({\omega_{r}}d/v\right)  -2\left(\cos\left({\omega}d/v'\right)\cos\left({\omega}d/v'\right)-\sin\left({\omega}d/v'\right)\sin\left({\omega}d/v'\right)\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right) \notag \\
+&={\left(\cos\left({\omega}d/v'\right)\cos^2\left({\omega_{r}}d/v\right)-\cos\left({\omega}d/v'\right)\sin^2\left({\omega_{r}}d/v\right)\right)}^2 \notag \\
+&{\ }+{\left(\sin\left({\omega}d'/v\right)\cos^2\left({\omega_{r}}d/v\right)+\sin\left({\omega}d'/v\right)\sin^2\left({\omega_{r}}d/v\right)\right)}^2\notag \\
+&=\cos^4\left({\omega_{r}}d/v\right)+\sin^4\left({\omega_{r}}d/v\right)   \notag \\
+&{\ }-2\left(\cos\left({\omega}d/v'\right)\cos\left({\omega}d'/v\right)-\sin\left({\omega}d'/v\right)\sin\left({\omega}d'/v\right)\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right) \notag \\
 &=\cos^4\left({\omega_{r}}d/v\right)+\sin^4\left({\omega_{r}}d/v\right) -2\cos\left(\frac{2\omega}{v}d'\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right) \notag \\
 &=\left(\cos^2\left({\omega_{r}}d/v\right)+\sin^2\left({\omega_{r}}d/v\right)\right)^2 -2\left(1+\cos\left(\frac{2\omega}{v}d'\right)\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right)  \notag \\
-&=1-4\cos^2\left({\omega}d/v'\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right) \notag \\
-&=1-\cos^2\left({\omega}d/v'\right)\sin^2\left(\frac{2\omega_{r}}{v}d\right) 
+&=1-4\cos^2\left({\omega}d'/v\right)\cos^2\left({\omega_{r}}d/v\right)\sin^2\left({\omega_{r}}d/v\right) \notag \\
+&=1-\cos^2\left({\omega}d'/v\right)\sin^2\left(\frac{2\omega_{r}}{v}d\right) 
 \end{align}
-$ゆえに、領域Ⅳにおける磁場Bの大きさを変えながらビームの下流でスピン上成分の粒子の数を測定すると、干渉が観測できる。$
+$確かに、領域Ⅳにおける磁場Bの大きさを変えながらビームの下流でスピン上成分の粒子の数を測定すると、干渉が観測できる。$
 
 
 
