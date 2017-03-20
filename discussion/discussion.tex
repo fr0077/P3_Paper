@@ -1,7 +1,7 @@
 \section{考察}
 実験で得られたデータからははっきりと波うつパターンが見て取れる。この章ではその波模様をいくつかの要素に分解し、それぞれについて理論的に説明できるかどうかを考えてゆく。私たちは望んだ干渉の結果を見ることができたのか。
 
-\subsection{波模様の分解$\sim$実験と理論の対応$\sim$}
+\subsection{波模様の分解}
 
 \ref{Resonance_sec}章で述べたように、干渉パターンは最も一般的には、共鳴からのずれを表すパラメータ$\epsilon$と中性子の速度$v$に依存した係数$N_1,N_2,N_3$を用いて
 \begin{equation}
@@ -13,7 +13,7 @@ I=N_1-N_2\cos\left(\frac{2}{v}(\omega d'-\epsilon L')\right) -N_3\sin\left(\frac
 \end{equation}
 で$\phi$を定義すれば、干渉パターンは
 \begin{equation}
-I=N_1-N_4\cos\left(\frac{2}{v}(\omega d'-\epsilon L')-\phi\right)
+I=N_1-N_4\cos\left(\frac{2}{v}(\omega d'-\epsilon L')-\phi\right)\label{Discussion_theory_ippan2}
 \end{equation}
 と書き直される。このように書くと実験データをフィッティングして得られる4つのパラメータと理論式を対応づけることができる。すなわち、実験で得られた波模様を位相シフタコイルに流した電流$I_p$に対して
 \begin{equation}
@@ -35,9 +35,11 @@ D \leftrightarrow N_1
 \begin{align}
 A \leftrightarrow N_4&&B \leftrightarrow \dfrac{2\omega d'}{v(-I_p)}&&C \leftrightarrow \dfrac{2\epsilon L'}{v} +\phi&&D \leftrightarrow N_1
 \end{align}
-と対応づくことがわかる。なお、$I_p$は鉛直下向きに磁場が発生する向きを正としたため、$B,C$の符号は上のように対応づけるのがよい。
+と対応づくことがわかる。なお、$I_p$は鉛直下向きに磁場が発生する向きを正としたため、$B,C$については理論式(\ref{Discussion_theory_ippan})のコサインの中身にマイナスをかけて対応づけておく。
 
-この節の要は、単に実験と理論を対応づけたということではなく、波模様というあいまいな概念を輪郭の明確な4つの要素に分解したことにある。これから4つの要素それぞれについて考えてゆく。
+なお、実験で得られたデータはある波長領域について積分したものであるため、ひとつの波長に対して定められた理論式(\ref{Discussion_theory_ippan})とは厳密には対応づかない。しかし十分狭い波長領域で見れば、近似的に領域の中心の波長に対する理論式と実験値を対応づけることができる。このことの詳しい議論は後で行う。
+
+この節の要は、単に実験と理論を対応づけたということではなく、波模様というあいまいな概念を輪郭の明確な4つの要素に分解したことにある。これから4つの要素それぞれについて個別に考えてゆく。
 
 \subsection{$B$}
 \paragraph{パラメータ$B$の意味}
@@ -52,40 +54,13 @@ I=\frac{1}{2}\left(1-\cos\frac{2\omega d'}{v}\right) \label{Discussion_theory_si
 \begin{align}
 \omega d'=\frac{|\mu_n|B_p d'}{\hbar}=\frac{(-I_p)|\mu_n| b_p d'}{\hbar}
 \end{align}
-となる。ここで$b_p$は位相シフタコイルに1Aの電流を流したときに発生する磁束密度。なおこの章では実験値と理論値を比較する必要からSI単位系を用い、$\hbar$も明記する。さらに位相シフタコイルによる磁場は空間的に一様ではないため、実際は粒子の軌道に沿って
+となる。ここで$b_p$は位相シフタコイルに1Aの電流を流したときに発生する磁束密度。なおこの章では実験値と理論値を比較する必要からSI単位系を用い、$\hbar$も明記する。さらに位相シフタコイルによる磁場は空間的に一様ではないため、実際は粒子の軌道に沿った積分で表す必要がある:
 \begin{equation}
 b_p d' \rightarrow \int b_p(x) dx
 \end{equation}
-と積分で表す必要がある。
 
 次の図\ref{Discussion_fig_PhaseShifterSimulation}は位相シフタコイルに1Aの電流を流したときの磁場分布シミュレーション結果である。%またシフタコイルの中心($y=z=0$)を通ったときの$x$軸に沿っての磁場分布を図\ref{Discussion_fig_PSS_danmen}に表す。
-\begin{figure}[h]
-\begin{minipage}{0.5\hsize}
-\centering
-\includegraphics[width=\hsize]{discussion/B/coil11_image1.pdf}
-\subcaption{横から}
-\end{minipage}
-\begin{minipage}{0.5\hsize}
-\centering
-\includegraphics[width=\hsize]{discussion/B/coil11_image2.pdf}
-\subcaption{上から}
-\end{minipage}\\
-\begin{center}
-\includegraphics[width=9cm]{discussion/B/coil11_danmen1.pdf}
-\subcaption{シフタコイルの中心($y=z=0$)を通ったとき}
-\end{center}
-\caption{位相シフタコイル磁場分布シミュレーション} \label{Discussion_fig_PhaseShifterSimulation}
-%\vspace{-1cm}
-\end{figure}
-\begin{comment}
-\begin{figure}[h]
-\centering
-\includegraphics[width=9cm]{discussion/B/coil11_danmen1.pdf}
-\caption{$x$軸に沿っての磁場分布シミュレーション} \label{Discussion_fig_PSS_danmen}
-\end{figure}
-\end{comment}
-
-\noindent このシミュレーションを用いて$\int b_p(x) dx$を計算すると、シフタコイルの中心($y=z=0$)を通ったときの積分値は
+このシミュレーションを用いて$\int b_p(x) dx$を計算すると、シフタコイルの中心($y=z=0$)を通ったときの積分値は
 \begin{equation}
 \int b_p(x) dx =2.75 \times 10^{-5} \mathrm{T\cdot m/A}
 \end{equation}
@@ -94,6 +69,7 @@ b_p d' \rightarrow \int b_p(x) dx
 \centering
 \includegraphics[width=9cm]{discussion/B/bd.pdf}
 \caption{$y,z$方向のずれによる影響} \label{Discussion_fig_PSS_zure}
+\vspace{-5mm}
 \end{figure}
 
 ゆえに$B$の理論値は
@@ -102,13 +78,36 @@ b_p d' \rightarrow \int b_p(x) dx
 \end{equation}
 となる。ただし$\lambda$[\AA]は中性子の波長。 
 
+\begin{figure}[H]
+%\begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=9cm]{discussion/B/coil11_image1.pdf}
+\vspace{-1mm}
+\subcaption{横から}
+\vspace{-3mm}
+%\end{minipage}
+%\begin{minipage}{0.5\hsize}
+%\centering
+\includegraphics[width=9cm]{discussion/B/coil11_image2.pdf}
+\vspace{-1mm}
+\subcaption{上から}
+\vspace{-3mm}
+%\end{minipage}\\
+%\begin{center}
+\includegraphics[width=9cm]{discussion/B/coil11_danmen1.pdf}
+\vspace{-1mm}
+\subcaption{中心($y=z=0$)を通ったとき}
+\vspace{-3mm}
+\end{center}
+%\end{center}
+\caption{位相シフタコイル磁場分布シミュレーション} \label{Discussion_fig_PhaseShifterSimulation}
+%\vspace{-1cm}
+\end{figure}
+
 \paragraph{実験結果・解析}
 以下の表\ref{Discussion_tbl_B}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$B$の値と式(\ref{Discussion_theory_B})から得られる理論値を示す。なお理論値には中性子の経路による誤差1\% が含まれるとした。また表\ref{Discussion_tbl_B}の結果を図\ref{Discussion_fig_B}に表す。図、表からわかるように全ての波長領域でパラメータ$B$の実験値と理論値はよく一致しており、多くの波長において誤差の範囲で一致している。
 
-\paragraph{結論}
-パラメータ$B$こそスピン干渉の本質であり、それが干渉のみられた全ての波長領域で理論値とよく一致したということは、私たちが望みのものを手に入れたということを示唆している。目的は果たされた。
-
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{minipage}{0.35\hsize}
 \centering
 \makeatletter
@@ -138,6 +137,9 @@ $\lambda$[\AA] &  $B(実験)$ &   理論値 \\ \hline
 \caption{各波長領域に対する$B$} \label{Discussion_fig_B}
 \end{minipage}
 \end{figure}
+
+\paragraph{結論}
+パラメータ$B$こそスピン干渉の本質であり、それが干渉のみられた全ての波長領域で理論値とよく一致したということは、私たちが望みのものを手に入れたということを示唆している。目的は果たされた。
 
 \subsection{$C$}
 \paragraph{パラメータ$C$の意味}
@@ -176,12 +178,12 @@ N_4=\sqrt{N_2^2+N_3^2}=2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\ome
 &\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d\\
 &N_2 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\cos \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d -\frac{\epsilon}{\omega_{A1}}\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\sin \frac{\omega_{A2}}{v}d\right) \\
 &N_3 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\frac{\epsilon}{\omega_{A1}}\sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d +\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d\right)
-\end{align}
+\end{align}\label{Discussion_theory_ippanippan}
 となる。ここで$\omega_{Ai}=\sqrt{\epsilon^2+\omega_{ri}^2} \ (i=1,2)$である。これでパラメータ$C$について実験値と理論値を比較する準備が整った。
 
 \paragraph{実験結果}
 以下の表\ref{Discussion_tbl_C}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$C$の値を示し、中心波長$\lambda$と$C$の関係を図\ref{Discussion_fig_C}に表す。
-\begin{figure}[H]
+\begin{figure}[h]
 \begin{minipage}{0.35\hsize}
 \centering
 \makeatletter
@@ -297,12 +299,12 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 \centering
 \vspace{2.5cm}
 \includegraphics[width=10cm]{discussion/D/D_F.pdf}
-\caption{中心波長$\lambda$と$C$の関係} \label{Discussion_fig_D}
+\caption{中心波長$\lambda$と$D$の関係} \label{Discussion_fig_D}
 \end{minipage}
 \end{figure}
 
 \paragraph{解析}
-前節の結果から$\epsilon/\omega_z=0.131$としたときの$D$の理論値を実験値と共に図\ref{Discussion_fig_D_N1}に表す。このときreduced$\chi^2=6.7$となり、理論値と実験値の一致はあまりよくない。全ての波長において実験値は理論値よりも上にずれている。
+パラメータ$C$に対する考察の結果から$\epsilon/\omega_z=0.131$としたときの$D$の理論値を実験値と共に図\ref{Discussion_fig_D_N1}に表す。このときreduced$\chi^2=74/12=6.2$となり、理論値と実験値の一致はあまりよくない。全ての波長において実験値は理論値よりも上にずれている。これは粒子数の変動の中心が数の多い方へシフトしていることを意味しており、バックグラウンドの存在が示唆される。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{discussion/D/D_F_N1.pdf}
@@ -310,7 +312,69 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 \end{figure}
 
 \paragraph{結論}
-パラメータ$D$は干渉波が振動する中心の高さを表し、パラメータ$B$や$C$からは知り得なかった粒子数の絶対値に関する情報を教えてくれる。$D$の実験値が理論値と比べて大きくなっていることは、粒子数の変動の中心が数の多い方へシフトしていること、すなわちバックグラウンドの存在を示唆している。バックグラウンドに関する詳しい議論は後にまわす。
+パラメータ$D$は干渉波が振動する中心の高さを表し、パラメータ$B$や$C$からは知り得なかった粒子数の絶対値に関する情報を教えてくれる。$D$の実験値が理論値と比べて大きくなっていることはバックグラウンドの存在を示唆している。バックグラウンドに関する詳しい議論は後にまわす。
+
+\subsection{$A$}
+\paragraph{パラメータ$A$の意味}
+パラメータ$A$は干渉の波模様の振幅を表す。パラメータ$A$は$D$と同様に波の高さに関係した量であり、絶対的な粒子数に関する情報を持つ。一方で位相のずれた波が重なるとうなりが生じて振幅は変化する。その意味でパラメータ$A$は位相に関する情報も持っているといえる。
+
+\paragraph{理論からのアプローチ}
+理論的には$A$は$N_4$に対応する。その具体的な表式は式(\ref{Discussion_theory_ippanippan})より
+\begin{align}
+N_4&=\sqrt{N_2^2+N_3^2} \notag \\
+&=2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d\sqrt{\left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)}
+\end{align}
+である。これを種々の$\epsilon/\omega_z$に対して波長を横軸として図示すると図\ref{Discussion_fig_N4}のようになる。各種パラメータには表\ref{Discussion_tbl_parameter}の値を用いた。図\ref{Discussion_fig_N4}は波長に対する$N_1$を描いた図\ref{Discussion_fig_N1}を0.5を境に反転したように見える。実際、$\omega_{r1}=\omega_{r2}$のときは$N_1+N_4=1$が厳密になりたつ。つまり上流下流のスピンフリッパーで$\omega_r$が等しいときは共鳴のいかんに関わらず常に干渉の波の頂上は1に達する(図\ref{Resonance_fig_interference}参照)。
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{discussion/A/N4.pdf}
+\caption{中性子の波長$\lambda$に対する$N_4$}\label{Discussion_fig_N4}
+\end{figure}
+
+\paragraph{実験結果}
+以下の表\ref{Discussion_tbl_A}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$A$の値を示し、中心波長$\lambda$と$A$の関係を図\ref{Discussion_fig_A}に表す。
+\begin{figure}[H]
+\begin{minipage}{0.35\hsize}
+\centering
+\makeatletter
+\def\@captype{table}
+\makeatother
+\caption{各波長領域におけるパラメータ$A$の実験値} \label{Discussion_tbl_A}
+\begin{tabular}{ll}
+$\lambda$[\AA] &  $A(実験)$\\ \hline
+3.06 	&	0.21 	$\pm$	0.02 	\\
+3.21 	&	0.27 	$\pm$	0.03 	\\
+3.35 	&	0.25 	$\pm$	0.02 	\\
+3.42 	&	0.28 	$\pm$	0.03 	\\
+3.50 	&	0.30 	$\pm$	0.03 	\\
+3.56 	&	0.24 	$\pm$	0.03 	\\
+3.66 	&	0.20 	$\pm$	0.03 	\\
+3.75 	&	0.24 	$\pm$	0.04 	\\
+3.86 	&	0.17 	$\pm$	0.03 	\\
+4.00 	&	0.21 	$\pm$	0.04 	\\
+4.15 	&	0.15 	$\pm$	0.04 	\\
+4.29 	&	0.11 	$\pm$	0.03 	\\ \hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.65\hsize}
+\centering
+\vspace{2.5cm}
+\includegraphics[width=10cm]{discussion/A/A_F.pdf}
+\caption{中心波長$\lambda$と$A$の関係} \label{Discussion_fig_A}
+\end{minipage}
+\end{figure}
+
+\paragraph{解析}
+パラメータ$C$に対する考察の結果から$\epsilon/\omega_z=0.131$としたときの$A$の理論値を実験値と共に図\ref{Discussion_fig_A_N4}に表す。このときreduced$\chi^2=1041/12=87$となり、理論値と実験値の一致は悪い。全ての波長において実験値は理論値よりも大きく下にずれている。これは干渉波の振幅が理論の予想より小さいことを意味する。この原因として、バックグラウンドによって波の高さの振動中心が上へずれたことと、位相のずれた波が重ね合わさり振幅が減衰したことの2つが考えられる。
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{discussion/A/A_F_N4.pdf}
+\caption{波長に対する$D$の実験値と$\epsilon/\omega_z=0.131$のときの理論値}
+\end{figure}
+
+\paragraph{結論}
+パラメータ$A$は干渉波の振幅を表し、波の高さと位相の両方に依存する。干渉をみる波長領域の中心波長に対する理論値と実験値は一致せず、実験値は理論値の半分程度となった。観測粒子数にあるバックグラウンドが含まれており、粒子数の変動の中心が数の多い方へずれたこと、実験で得られたデータはある波長領域について観測粒子数を積分したものであり、位相のずれた波が重ね合わさることで振幅が減衰したことが原因として考えられる。
+
 
 
 
