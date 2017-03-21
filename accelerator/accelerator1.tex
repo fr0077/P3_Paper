@@ -2,7 +2,10 @@
 \section{加速器の原理}
 本実験は京都大学小型中性子源KUANS(Kyoto University Accelerator-driven Neutron Source)で行った。本節ではKUANSについて説明する。
 KUANSの性能は以下のようになっている。
+
+
 \begin{table}[htb]
+\centering
 \begin{tabular}{lcrr}
 加速器&陽子線形加速器\\
 加速粒子&陽子\\
@@ -13,11 +16,16 @@ KUANSの性能は以下のようになっている。
 中性子減速材&ポリエチレン($10\times10\times10$ cm$^3$)\\
 \end{tabular}
 \end{table}
+
+\begin{figure}[h]
 \begin{center}
-\includegraphics[width=9cm]{accphoto.jpg}
+\includegraphics[width=9cm,height=6cm]{accelerator/accphoto.jpg}
+\caption{陽子線形加速器}
 \end{center}
+\end{figure}
+
 \subsection{中性子発生方法}
-まず陽子線形加速器によって陽極で発生させた陽子を電圧で加速させ、シールド内に収められているBeターゲットへと衝突させる。
+まず陽子線形加速器によって陽極で発生させた陽子を電圧で加速させ、シールド内に収められているBeターゲットへと衝突させる。\\
 この際起こる以下の反応、\begin{equation}
 \ce{p + {^{9}Be} ->n + {^{9}B}}\end{equation}
 によって中性子を発生させている。
@@ -39,8 +47,12 @@ $T_f:減速材をでた中性子が検出器に入るまでに要する時間の
 $d:減速材から検出器までの距離$\\
 本実験においては約1100m/s、波長にして約3.5$\AA$の範囲にある中性子を用いた。
 \subsection {中性子のTOF分布}
-グラフは実際に測定したTOF分布である。
-減速材で熱平衡に達しなかった高速中性子に因る寄与であり、熱平衡に達した熱中性子に因る寄与である。
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{accelerator/TOF.pdf}
+\caption{実際に測定したTOF分布}
+\end{figure}
+領域①は減速材で熱平衡に達しなかった高速中性子に因る寄与であり、領域②は熱平衡に達した熱中性子に因る寄与である。
 後者TOF分布$F(t)$は\begin{equation}F(t)\propto \frac{1}{t^{3}}\exp(-\frac{md^2}{2kTt^2}) \end{equation}で与えられる。
 \subsubsection{補足:中性子のフラックス}
 検出器に速度$v$で入射する中性子の数を考える。
@@ -77,3 +89,5 @@ LiM(Lithium Monitor)はシールド内の減速材の後に置かれていて、
 このLiMの値と取り出した中性子ビーム強度は比例すると考えて本実験で規格化する際に用いた。
 LiMの値を実際に測定するとグラフのようになった。
 グラフを見ると分かるように本加速器は一定強度ではなく次第にビーム強度が低下し、ある値の周辺で変動する特徴があることが分かる。
+
+
