@@ -308,7 +308,7 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{discussion/D/D_F_N1.pdf}
-\caption{波長に対する$D$の実験値と$\epsilon/\omega_z=0.131$のときの理論値}
+\caption{波長に対する$D$の実験値と$\epsilon/\omega_z=0.131$のときの理論値}\label{Discussion_fig_D_N1}
 \end{figure}
 
 \paragraph{結論}
@@ -375,6 +375,25 @@ $\lambda$[\AA] &  $A(実験)$\\ \hline
 \paragraph{結論}
 パラメータ$A$は干渉波の振幅を表し、波の高さと位相の両方に依存する。干渉をみる波長領域の中心波長に対する理論値と実験値は一致せず、実験値は理論値の半分程度となった。観測粒子数にあるバックグラウンドが含まれており、粒子数の変動の中心が数の多い方へずれたこと、実験で得られたデータはある波長領域について観測粒子数を積分したものであり、位相のずれた波が重ね合わさることで振幅が減衰したことが原因として考えられる。
 
+\subsection{中心波長で考えてよい理由}
+実験で得られたデータはある波長領域について積分したものであるため、ひとつの波長に対して定められた理論式(\ref{Discussion_theory_ippan})とは厳密には対応づかない。しかし十分狭い波長領域で見れば、近似的に領域の中心の波長に対する理論式と実験値を対応づけることができる。
+
+例えば中心波長$\lambda=3.42$\AA に対して$\pm 0.4$\AA の波長領域を考えると、中心波長における干渉パターンと波長領域で積分したときの干渉パターンは次の図\ref{Discussion_fig_CenterOrInteg1}のようになる。位相シフタコイルに流す電流が増えるにつれ、2つの波が位相についても振幅についてもずれていくのがわかる。
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{discussion/COI/CenterOrInteg1.pdf}
+\caption{$\lambda=3.42\pm0.4$\AA のときの中心波長での干渉パターンと干渉パターンの波長領域での積分}\label{Discussion_fig_CenterOrInteg1}
+\vspace{-5mm}
+\end{figure}
+
+次に十分狭い波長領域$\lambda=3.42\pm0.07$\AA を考え、同様に中心波長における干渉パターンと波長領域で積分したときの干渉パターンを図\ref{Discussion_fig_CenterOrInteg2}に表す。このように実験を行った電流範囲でみる限り、2つの波の位相はほぼずれず、振幅についてもずれは最大で4\% 程度である。
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{discussion/COI/CenterOrInteg2.pdf}
+\caption{$\lambda=3.42\pm0.07$\AA のときの中心波長での干渉パターンと干渉パターンの波長領域での積分}\label{Discussion_fig_CenterOrInteg2}
+\end{figure}
+
+従って、$\pm0.07$\AA 程度の十分狭い波長領域でみる限り、領域の中心波長に対する理論式と実験値を対応づけることができる。
 
 
 
