@@ -13,3 +13,5 @@
 *.xbb
 *.dvi
 main.pdf
+.DS_STORE
+.swp
