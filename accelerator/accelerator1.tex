@@ -1,4 +1,3 @@
-
 \section{加速器の原理}
 本実験は京都大学小型中性子源KUANS(Kyoto University Accelerator-driven Neutron Source)で行った。本節ではKUANSについて説明する。
 KUANSの性能は以下のようになっている。
@@ -49,7 +48,7 @@ $d:減速材から検出器までの距離$\\
 \subsection {中性子のTOF分布}
 \begin{figure}[h]
 \centering
-\includegraphics[width=9cm]{Li.pdf}
+\includegraphics[width=9cm]{accelerator/TOF.pdf}
 \caption{実際に測定したTOF分布}
 \end{figure}
 領域①は減速材で熱平衡に達しなかった高速中性子に因る寄与であり、領域②は熱平衡に達した熱中性子に因る寄与である。
@@ -84,15 +83,15 @@ N &=&
 &\propto& v^3\exp(-\frac{mv^2}{2kT})
 \end{eqnarray*}
 この$v$を$t=\frac{d}{v}$で書き換えたものが先に示したTOF分布$F(t)$である。
+\newpage
 \subsection{Lim}
 LiM(Lithium Monitor)はシールド内の減速材の後に置かれていて、ビームの一部を削り中性子ビーム強度を計測する役割を持つ。
 このLiMの値と取り出した中性子ビーム強度は比例すると考えて本実験で規格化する際に用いた。
-LiMの値を実際に測定するとグラフのようになった。
-\begin{figure}
-\begin{center}
-\includegraphics{accelerator/LiM.pdf}
-\end{center}
-\end{figure}
+LiMの値を実際に測定するとグラフのようになった。但し、横軸は時刻である。
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm,height=8cm]{accelerator/LiM.pdf}\caption{LiMの時間変化}
+\end{figure}\\
 グラフを見ると分かるように本加速器は一定強度ではなく次第にビーム強度が低下し、ある値の周辺で変動する特徴があることが分かる。
 
 
