@@ -48,7 +48,7 @@ i\frac{\del \psi_\mathrm{I}}{\del t}= \Biggl[-\frac{1}{2m} \frac{\del^2}{\del x^
 \begin{equation}
 \bm{B}_{\mathrm{II}}=\hat{\bm{x}} (2B_r)\cos \omega_s t+\hat{\bm{z}} B_z
 \end{equation}
-と書く。ただし$\hat{\bm{x}},\hat{\bm{z}}$はそれぞれx,z軸正の向きの単位ベクトル。$|B_r| \ll |B_z|$のときには、後で述べる理由により振動磁場を次のような$xy$平面上の回転磁場に置き換えてよい:
+と書く。ただし$\hat{\bm{x}},\hat{\bm{z}}$はそれぞれx,z軸正の向きの単位ベクトル。$|B_r| \ll |B_z|$のときには、\ref{pi2flipper_sec}章で述べた理由により振動磁場を次のような$xy$平面上の回転磁場に置き換えてよい:
 \begin{equation}
 \hat{\bm{x}} (2B_r)\cos \omega_s t \rightarrow \hat{\bm{x}} B_r \cos \omega_s t+\hat{\bm{y}} \sin \omega_s t
 \end{equation}
@@ -298,8 +298,8 @@ R_2^-=0
 \end{figure}
 
 %\begin{comment}
-\paragraph{振動磁場の反回転成分が無視できる理由}
-略(本の通り)
+%\paragraph{振動磁場の反回転成分が無視できる理由}
+%略(本の通り)
 %\renewcommand{\arraystretch}{1}
 %\end{comment}
 
@@ -591,6 +591,13 @@ $
 \item 1MHzバイポーラ電源HSA4014(エヌエフ回路設計ブロック) $\times 2$ \ \ (以後、アンプ1,2)
 \end{enumerate}
 
+\vspace{1cm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{resonance/whatwhyhow/kairozu.pdf}
+\caption{配線図}
+\end{figure}
+
 \clearpage
 \paragraph{実験手順}
 実験は次のフローチャートに沿って行った。
@@ -863,4 +870,4 @@ $I_c$&0.185A \\ \hline
 \end{tabular}
 \end{table}
 
-\noindent として実験を進めた。このことによる共鳴条件からのずれは共に$\epsilon/\omega_z=$0.01$\sim$0.02程度であり、十分小さいといえる(図\ref{Resonance_fig_visivility},\ref{Resonance_fig__interference}参照)。
+\noindent として実験を進めた。このことによる共鳴条件からのずれは共に$\epsilon/\omega_z=$0.01$\sim$0.02程度であり、十分小さいといえる(図\ref{Resonance_fig_visivility},\ref{Resonance_fig_interference}参照)。
