@@ -5,6 +5,8 @@
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%ベクトルの定義
+\usepackage{bm} 
 %一括コメントアウト
 %\begin{comment}
 \usepackage{comment}
@@ -118,9 +120,10 @@
 \renewcommand\Authands{\quad}
 
 %もう少しまともなタイトルを考える
-\title{スピン・エコー}
+\title{KUANSにおける熱中性子を用いたスピン干渉実験}
 
-\date{\vspace{3cm} \includegraphics{logo.pdf}\\ \vspace{5cm} 提出年月\quad2017年4月}
+\date{\vspace{3cm} \includegraphics[width=4cm]{logo_s.pdf}\\
+\vspace{3.5cm} 提出年月\quad2017年3月}
 
 \author[$\dagger$]{加須屋春樹}
 \author[$\dagger$]{近藤寛記}
@@ -134,17 +137,22 @@
 \affil[$\dagger$]{京都大学 理学部}
 \author[ ]{\\}
 \author[ ]{指導教員\quad}
-\author[*]{菅沼秀夫 准教授}
 \author[*]{成木恵 准教授}
+\author[*]{菅沼秀夫 准教授}
+\author[*]{国広悌二 教授}
 \affil[*]{京都大学 理学研究科}
 \begin{document}
 \maketitle
 \tableofcontents
 
 %ここで文書をincludeします
+\include{abstract/abstract}
 \include{mirror/mirror}
+\include{pi2flipper/pi2flipper}
 \include{detector/detector2}
 \include{angle/angle}
+\include{phase_shifter/phase_shifter}
+
 \bibliographystyle{jplain}
 \bibliography{bibliography}
 \end{document}
