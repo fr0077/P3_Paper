@@ -1,6 +1,25 @@
 \section{考察}
 前章では干渉パターンを4つの要素に分解し、位相に関係した2つのパラメータ$B,C$については実験結果を理論がよく説明することを見た。しかし波の水深に関係した2つのパラメータ$A,D$については実験結果と理論との間に相違が見られた。この章ではこの相違を説明するために2つの異なる仮説を立て、それぞれ仮説の下で実験結果がうまく説明できるかを考察する。
 
+\subsection{大きな分散性位相}
+位相の異なる波が重ね合わさるとうなりが生じ振幅は変動する。これまでの議論では波長によって変化する位相、すなわち分散性位相は小さく、十分小さい波長領域でみる限りは振幅への影響はほとんどなかった。しかしもし考慮していない効果によって大きな分散性位相が生じるとすれば、振幅への影響は大きなものとなり、パラメータ$A$の実験結果をうまく説明できるかもしれない。
+
+\paragraph{スピンフリッパー間の飛行時間による効果}
+2つのスピンフリッパーが距離$L_f$だけ離れているとする。時刻$t$に上流側のフリッパーを通過した速度$v$の中性子は時刻$t+L/v$に下流側のフリッパーを通過する。中性子がスピンフリッパー間を飛行するのにかかる時間$L_f/v$の間にスピンフリッパーの振動磁場$2B_r\cos\omega_s t$の位相は$\omega_s L_f/v$だけまわってしまう。この効果を取り入れるために下流側のスピンフリッパーの振動磁場を$2B_r\cos\omega_s (t+L_f/v)$としてみる。
+\begin{figure}[h]
+\centering
+\includegraphics[height=3cm]{discussion/FD/FD_setting.pdf}
+\end{figure}
+
+簡単のため共鳴条件が満たされており、また2つのフリッパーで$\omega_r$が等しい場合を考えると、領域Iで
+\begin{equation}
+\psi_\mathrm{I}(x,t)=\begin{pmatrix} 1\\0\end{pmatrix} \e^{i (k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t}
+\end{equation}
+と表された入射中性子は領域VIIで
+\begin{align}
+\psi_\mathrm{VII}(x,t)=\begin{pmatrix} \cos \frac{\omega_r}{v}d & -i\sin\frac{\omega_r}{v}d \e^{-i\omega_s \left(t+\frac{L_f}{v}\right)} \\ -i\sin\frac{\omega_r}{v}d \e^{-i\omega_s \left(t+\frac{L_f}{v}\right)} &\cos \frac{\omega_r}{v}d\end{pmatrix} \begin{pmatrix} \e^{-i\frac{\omega}{v}d'} &0 \\0&\e^{i\frac{\omega}{v}d'} \end{pmatrix} \begin{pmatrix} \cos \frac{\omega_r}{v}d & -i\sin\frac{\omega_r}{v}d \e^{-i\omega_s t} \\ -i\sin\frac{\omega_r}{v}d \e^{-i\omega_s t} &\cos \frac{\omega_r}{v}d\end{pmatrix} \begin{pmatrix} 1\\0\end{pmatrix} \e^{i (k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t}
+\end{align}
+
 \subsection{バックグラウンド}
 干渉を見る波長領域の中にミラーで反射されていない中性子が混ざっていたとすると、その分干渉波の振動中心は粒子数の多い方にずれ、観測確率として見たときの干渉波の振幅は小さくなることが予想される。
 
