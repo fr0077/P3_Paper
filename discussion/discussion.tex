@@ -32,21 +32,21 @@
 
 必ずしも共鳴条件を満たさず、必ずしも2つのフリッパーで$\omega_r$が等しくない場合についても同様に、干渉パターンは式(\ref{Analysis_N1r}),(\ref{Analysis_N2r}),(\ref{Analysis_N3r})の$N_1,N_2,N_3$を用いて
 \begin{equation}
-I=N_1-N_4\cos\left(\frac{2}{v} (\omega d' -\epsilon L') -\phi -\frac{\omega_s L}{v} \right)\label{Disucussion_FD_theory_s}
+I=N_1-N_4\cos\left(\frac{2}{v} (\omega d' -\epsilon L') -\phi -\frac{\omega_s L}{v} \right)\label{Discussion_FD_theory_s}
 \end{equation}
 と書ける。ここで$N_4=\sqrt{N_2^2+N_3^2},\cos\phi=N_2/N_4,\sin\phi=N_3/N_4$である。
 
 \paragraph{結果}
-次の図\ref{Discussion_FD_fig_s_470}は波長領域$\lambda=3.35\pm0.07$\AA における干渉パターンを式\ref{Discussion_FD_theory_s}を用いてフィッティングした結果である。フィッティングパラメータは$\epsilon/\omega_z$であり、図\ref{Discussion_FD_fig_s_470}のとき$\epsilon/\omega_z=0.112\pm0.001$、reduced$\chi^2=41.2/16=2.57$となった。振幅からのずれは十分小さく、振幅、位相共に実験値と理論値はよく一致している。しかし図\ref{Discussion_FD_fig_s}に表す他の波長領域で見ると位相がずれていることがわかる。なお各種パラメータには実測と測定データから求めた表\ref{Analysis},\ref{Discussion_FD_tbl_parameter}の値を用いた。
+次の図\ref{Discussion_FD_fig_s_470}は波長領域$\lambda=3.35\pm0.07$\AA における干渉パターンを式\ref{Discussion_FD_theory_s}を用いてフィッティングした結果である。フィッティングパラメータは$\epsilon/|\omega_z|$であり、図\ref{Discussion_FD_fig_s_470}のとき$\epsilon/|\omega_z|=0.112\pm0.001$、reduced$\chi^2=41.2/16=2.57$となった。振幅からのずれは十分小さく、振幅、位相共に実験値と理論値はよく一致している。しかし図\ref{Discussion_FD_fig_s}に表す他の波長領域で見ると位相がずれていることがわかる。なお各種パラメータには実測と測定データから求めた表\ref{Analysis},\ref{Discussion_FD_tbl_parameter}の値を用いた。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{discussion/FD/IT_s_470.pdf}
-\caption{波長領域$\lambda=3.35\pm0.07$\AA における干渉パターンのフィッティング結果\newline 青が実験結果、灰色が波長領域内での0.01\AA 毎の理論値、赤が波長領域内での理論値の積分を表す}
+\caption{波長領域$\lambda=3.35\pm0.07$\AA における干渉パターンのフィッティング結果\newline 青が実験結果、灰色が波長領域内での0.01\AA 毎の理論値、赤が波長領域内での理論値の積分を表す}\label{Discussion_FD_fig_s_470}
 \end{figure}
 
 \begin{table}[h]
 \centering
-\caption{各種パラメータ2}
+\caption{各種パラメータ2}\label{Discussion_FD_tbl_parameter}
 \begin{tabular}{cc}
 $\omega_s/2\pi$[kHz]&$L$[mm]\\ \hline
 $-37.5$&$403$
@@ -70,7 +70,7 @@ $-37.5$&$403$
 \begin{minipage}{0.5\hsize}
 \includegraphics[width=\hsize]{discussion/FD/IT_s_500.pdf}
 \end{minipage}
-\caption{様々な波長領域における干渉パターン}
+\caption{様々な波長領域における干渉パターン}\label{Discussion_FD_fig_s}
 \end{figure}
 
 \paragraph{解析}
@@ -80,7 +80,7 @@ $-37.5$&$403$
 \begin{equation}
 \frac{2\epsilon L'}{v} +\phi +\frac{\omega_s L}{v}+2n\pi \quad (n:整数)
 \end{equation}
-である。そこでパラメータ$C$の実験値と$\epsilon/\omega_z=0.112$のときの$n=10,11,12,13,14$における理論値を図\ref{Discussion_FD_fig_C_s_470_fit}に表す。
+である。そこでパラメータ$C$の実験値と$\epsilon/|\omega_z|=0.112$のときの$n=10,11,12,13,14$における理論値を図\ref{Discussion_FD_fig_C_s_470_fit}に表す。
 \begin{figure}[H]
 \centering
 \includegraphics[width=9cm]{discussion/FD/C_s_470_fit.pdf}
@@ -132,7 +132,7 @@ g(k)=\frac{1}{\sqrt{\Delta} \pi^{\frac{1}{4}}} \exp \left[-\frac{1}{2\Delta^2}(k
 |\Psi_\mathrm{VII}^+|^2&\simeq \left| \cos^2 \frac{\omega_r d}{v_0} \e^{-i\frac{\omega d'}{v_0}} -\sin^2 \frac{\omega_r d}{v_0} \e^{i\frac{\omega d'}{v_0}} \right|^2 \left|\frac{1}{\sqrt{2\pi}}\int dk' \frac{1}{\sqrt{\Delta} \pi^{\frac{1}{4}}} \e^{ -\frac{1}{2\Delta^2}(k'-k_0)^2}\e^{i k'x-i\omega'(k')t} \right|^2 \notag \\
 &=\left(\cos^4 \frac{\omega_r d}{v_0} +\sin^4 \frac{\omega_r d}{v_0}-\sin^2 \frac{\omega_r d}{v_0} \cos^2 \frac{\omega_r d}{v_0} \cos \frac{2\omega d'}{v_0} \right) \frac{1}{\sqrt{\left(\left(\frac{\Delta t}{m}\right)^2+\left(\frac{1}{\Delta}\right)^2\right)\pi}}\exp\left[-\frac{(x-v_0 t)^2}{\left(\frac{\Delta t}{m}\right)^2+\left(\frac{1}{\Delta}\right)^2}\right]
 \end{align}
-とできる。ここで$k_0^2/m \gg \omega_z$より$v_0=\sqrt{(k_0/m)^2+2\omega_z/m}\simeq k_0/m=v_g$を用いた。速度中心$v_0$をもつスピン上向き中性子波束を1個入射し、位置$x=X_d$に置いた検出器で検出することを考えると、十分早い時刻$t \ll m/\Delta^2$では波束の幅は一定と見なしてよいから、十分早い時刻$t$から$t+dt$の間にスピン上向き中性子を観測する確率は
+とできる。ここで$k_0^2/m \gg |\omega_z|$より$v_0=\sqrt{(k_0/m)^2+2\omega_z/m}\simeq k_0/m=v_g$を用いた。速度中心$v_0$をもつスピン上向き中性子波束を1個入射し、位置$x=X_d$に置いた検出器で検出することを考えると、十分早い時刻$t \ll m/\Delta^2$では波束の幅は一定と見なしてよいから、十分早い時刻$t$から$t+dt$の間にスピン上向き中性子を観測する確率は
 \begin{equation}
 P=\left(\cos^4 \frac{\omega_r d}{v_0} +\sin^4 \frac{\omega_r d}{v_0}-\sin^2 \frac{\omega_r d}{v_0} \cos^2 \frac{\omega_r d}{v_0} \cos \frac{2\omega d'}{v_0} \right) \frac{\Delta v_0dt}{\sqrt{\pi}}\exp\left[-\Delta^2(X_d-v_0 t)^2\right]
 \end{equation}
@@ -159,7 +159,7 @@ I&=\left(\cos^4 \frac{\omega_r d}{v_0} +\sin^4 \frac{\omega_r d}{v_0}-\sin^2 \fr
 %\begin{minipage}{0.5\hsize}
 \centering
 \includegraphics[width=9cm]{discussion/BG/mirroroff.pdf}
-\caption{ミラーを置かずに測定した粒子数波長分布(RPMT検出器による測定)}\label{Discussion_fig_flipperoff}
+\caption{ミラーを置かずに測定した粒子数波長分布(RPMT検出器による測定)}\label{Discussion_fig_mirroroff}
 %\end{minipage}
 \end{figure}
 
@@ -375,7 +375,7 @@ $d$&$4.9\times 10^{-5}\pm4\times 10^{-6}$\\ \hline
 \clearpage
 \begin{table}[h]
 \centering
-\caption{各中心波長$\lambda$に対するパラメータ$A,B,C,D$とreduced$\chi^2$}
+\caption{各中心波長$\lambda$に対するパラメータ$A,B,C,D$とreduced$\chi^2$}\label{Discussion_tbl_IF_rb}
 \begin{tabular}{cccccc}
 $\lambda$[\AA]&$A$&$B$&$C$&$D$&reduced$\chi^2$\\ \hline
 2.92 	&	0.36 	$\pm$	0.07 	&	3.84 	$\pm$	0.07 	&	0.92 	$\pm$	0.13 	&	0.76 	$\pm$	0.12 	&	0.78 	\\
@@ -605,7 +605,7 @@ $\lambda$[\AA]&BG考慮前&BG考慮後&理論値\\ \hline
 %\begin{minipage}{0.5\hsize}
 \includegraphics[width=10cm]{discussion/SEA/IT_480_70.pdf}
 %\end{minipage}
-\caption{広い波長領域における実験値と理論値}
+\caption{広い波長領域における実験値と理論値}\label{Discussion_fig_around480}
 \end{figure}
 
 
