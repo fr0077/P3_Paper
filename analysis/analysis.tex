@@ -3,7 +3,7 @@
 
 \subsection{波の分解}
 
-\ref{Resonance_sec}章で述べたように、干渉パターンは最も一般的には、共鳴からのずれを表すパラメータ$\epsilon$と中性子の速度$v$に依存した係数$N_1,N_2,N_3$を用いて
+\ref{nonreso_sec}章で述べたように、干渉パターンは最も一般的には、共鳴からのずれを表すパラメータ$\epsilon$と中性子の速度$v$に依存した係数$N_1,N_2,N_3$を用いて
 \begin{equation}
 I=N_1-N_2\cos\left(\frac{2}{v}(\omega d'-\epsilon L')\right) -N_3\sin\left(\frac{2}{v}(\omega d'-\epsilon L')\right) \label{analysis_theory_ippan}
 \end{equation}
@@ -43,7 +43,7 @@ A \leftrightarrow N_4&&B \leftrightarrow \dfrac{2\omega d'}{v(-I_p)}&&C \leftrig
 
 \subsection{$B$}
 \paragraph{パラメータ$B$の意味}
-$B$には干渉という現象のエッセンスが凝縮されている。上では干渉パターンの最も一般的な形を見たが、逆に最も特殊な場合を見てみよう。それは共鳴条件(\ref{pi2flipper_resonance})が満たされている中で、$\pi/2$フリップ条件(\ref{})を満たす速度の中性子を対象とした場合である。そのときは$N_1=1/2,N_2=1/2,N_3=0,\epsilon=0$であるから、干渉パターンは
+$B$には干渉という現象のエッセンスが凝縮されている。上では干渉パターンの最も一般的な形を見たが、逆に最も特殊な場合を見てみよう。それは共鳴条件(\ref{nonreso_resonance})が満たされている中で、$\pi/2$フリップ条件(\ref{})を満たす速度の中性子を対象とした場合である。そのときは$N_1=1/2,N_2=1/2,N_3=0,\epsilon=0$であるから、干渉パターンは
 \begin{equation}
 I=\frac{1}{2}\left(1-\cos\frac{2\omega d'}{v}\right) \label{analysis_theory_simple}
 \end{equation}
@@ -105,7 +105,7 @@ b_p d' \rightarrow \int b_p(x) dx
 \end{figure}
 
 \paragraph{実験結果・解析}
-以下の表\ref{analysis_tbl_B}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$B$の値と式(\ref{analysis_theory_B})から得られる理論値を示す。なお理論値には中性子の経路による誤差1\% が含まれるとした。また表\ref{analysis_tbl_B}の結果を図\ref{analysis_fig_B}に表す。図、表からわかるように全ての波長領域でパラメータ$B$の実験値と理論値はよく一致しており、多くの波長において誤差の範囲で一致している。
+以下の表\ref{analysis_tbl_B}に波長領域$\lambda \pm 0.07$\AA における実験データから得られた$B$の値と式(\ref{analysis_theory_B})から得られる理論値を示す。なお理論値には中性子の経路による誤差1\% が含まれるとした。また表\ref{analysis_tbl_B}の結果を図\ref{analysis_fig_B}に表す。図、表からわかるように全ての波長領域でパラメータ$B$の実験値と理論値はよく一致しており、多くの波長において誤差の範囲で一致している。
 
 \begin{figure}[h]
 \begin{minipage}{0.35\hsize}
@@ -150,7 +150,7 @@ I=\frac{1}{2}\left(1-\cos\frac{2\omega d'}{v}\right)
 $C$の対応物$2\epsilon L'/v +\phi$は、どちらの項も$\epsilon=0$のときゼロとなるためである。すなわちパラメータ$C$は共鳴からのずれに依存する。パラメータ$C$を分析することで、共鳴からのずれを知ることができる。
 
 \paragraph{理論からのアプローチ}
-理論的には$C$は$2\epsilon L'/v +\phi$に対応し、$\cos\phi=N_2/N_4,\sin\phi=N_3/N_4$であった。\ref{Resonance_sec}章より
+理論的には$C$は$2\epsilon L'/v +\phi$に対応し、$\cos\phi=N_2/N_4,\sin\phi=N_3/N_4$であった。\ref{nonreso_sec}章より
 \begin{align}
 &N_2 = 2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d \left(\cos^2 \frac{\omega_A}{v}d -\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d\right) \\
 &N_3 = 4\frac{\epsilon}{\omega_A} \left(\frac{\omega_r}{\omega_A}\right)^2\sin^3\frac{\omega_A}{v}d \cos \frac{\omega_A}{v}d
@@ -164,14 +164,14 @@ N_4=\sqrt{N_2^2+N_3^2}=2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\ome
 \cos\phi&=\frac{\cos^2 \frac{\omega_A}{v}d -\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d}{\cos^2\frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d} \\
 \sin\phi&=\frac{2\frac{\epsilon}{\omega_A}\sin\frac{\omega_A}{v}d \cos \frac{\omega_A}{v}d}{\cos^2\frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d}
 \end{align}
-であり、確かに$\epsilon=0$のとき$\phi=0$となる。次の図\ref{analysis_fig_phi}に$\epsilon/\omega_z=0,0.1,0.3,0.5,1.0$のときの中性子の波長$\lambda$に対する$\phi$の理論値を表す。ただし$\omega_r/\omega_z=0.25,B_z=12.8\,\mathrm{G}$とした。
+であり、確かに$\epsilon=0$のとき$\phi=0$となる。次の図\ref{analysis_fig_phi}に$\epsilon/|\omega_z|=0,0.1,0.3,0.5,1.0$のときの中性子の波長$\lambda$に対する$\phi$の理論値を表す。ただし$\omega_r/\omega_z=0.25,B_z=12.8\,\mathrm{G}$とした。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{analysis/C/chi.pdf}
 \caption{中性子の波長$\lambda$に対する$\phi$} \label{analysis_fig_phi}
 \end{figure}
 
-これを実験値と比べるためにはもう一工夫必要となる。理論では上流と下流のスピンフリッパーで$\omega_r$の値は等しいとしていた。しかし、実際に測定データから得られた$\omega_r$は上流と下流で異なっていた(\ref{Resonance_sec}章参照)。%上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},\omega_{r2}$とすると$\omega_r/2\pi=8.7\pm0.1\,\mathrm{kHz},
+これを実験値と比べるためにはもう一工夫必要となる。理論では上流と下流のスピンフリッパーで$\omega_r$の値は等しいとしていた。しかし、実際に測定データから得られた$\omega_r$は上流と下流で異なっていた(\ref{resonance_sec}章参照)。%上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},\omega_{r2}$とすると$\omega_r/2\pi=8.7\pm0.1\,\mathrm{kHz},
 そこで上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},\omega_{r2}$として、2つのフリッパーで$\omega_r$が異なる場合も含めた干渉パターンの式を求めると、式の形は$\omega_r$が等しい場合(\ref{analysis_theory_ippan})と同じで、係数が
 \begin{align}
 &N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)\\ \notag
@@ -182,7 +182,7 @@ N_4=\sqrt{N_2^2+N_3^2}=2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\ome
 となる。ここで$\omega_{Ai}=\sqrt{\epsilon^2+\omega_{ri}^2} \ (i=1,2)$である。これでパラメータ$C$について実験値と理論値を比較する準備が整った。
 
 \paragraph{実験結果}
-以下の表\ref{analysis_tbl_C}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$C$の値を示し、中心波長$\lambda$と$C$の関係を図\ref{analysis_fig_C}に表す。
+以下の表\ref{analysis_tbl_C}に波長領域$\lambda \pm 0.07$\AA における実験データから得られた$C$の値を示し、中心波長$\lambda$と$C$の関係を図\ref{analysis_fig_C}に表す。
 \begin{figure}[h]
 \begin{minipage}{0.35\hsize}
 \centering
@@ -215,7 +215,7 @@ $\lambda$[\AA] &  $C(実験)$\\ \hline
 \end{figure}
 
 \paragraph{解析}
-$\epsilon/\omega_z$をフィッティングパラメータとして実験値をフィッティングすることを考える。このときフィッティング関数は$2\epsilon L'/v +\phi$であるが、正確には$2n\pi$(n:整数)の不定性が存在する。そこでフィッティング関数として次の形を用い、$n=-3,-2,-1,0,1,2$の各場合についてフィッティングを行った。
+$\epsilon/|\omega_z|$をフィッティングパラメータとして実験値をフィッティングすることを考える。このときフィッティング関数は$2\epsilon L'/v +\phi$であるが、正確には$2n\pi$($n$:整数)の不定性が存在する。そこでフィッティング関数として次の形を用い、$n=-3,-2,-1,0,1,2$の各場合についてフィッティングを行った。
 \begin{equation}
 2\epsilon L'/v +\phi+2n\pi
 \end{equation}
@@ -232,13 +232,13 @@ $\omega_{r1}/2\pi$[kHz]&$\omega_{r2}/2\pi$[kHz]&$\omega_{z}/2\pi$[kHz]&$d$[mm]&$
 次の表\ref{analysis_tbl_Cfit}に各$n$におけるフィッティングの結果を示す。カイ二乗が最も小さくなった$n=-1$のときについてフィッティング結果を図\ref{analysis_fig_Cfit}に表す。
 
 \paragraph{結論}
-パラメータ$C$は共鳴からのずれと関係づく。$\epsilon/\omega_z=0.131\pm0.001$とすると、干渉のみられた全ての波長領域でパラメータ$C$の実験値は理論値とよく一致した。すなわち今回の実験における共鳴からのずれは$\epsilon/\omega_z=0.131\pm0.001$程度であったと推測される。
+パラメータ$C$は共鳴からのずれと関係づく。$\epsilon/|\omega_z|=0.131\pm0.001$とすると、干渉のみられた全ての波長領域でパラメータ$C$の実験値は理論値とよく一致した。すなわち今回の実験における共鳴からのずれは$\epsilon/|\omega_z|=0.131\pm0.001$程度であったと推測される。
 
 \begin{table}[H]
 \centering
 \caption{$n=-3,-2,-1,0,1,2$に対するフィッティング結果}\label{analysis_tbl_Cfit}
 \begin{tabular}{ccc}
-$n$&$\epsilon/\omega_z$&reduced $\chi^2$\\ \hline
+$n$&$\epsilon/|\omega_z|$&reduced $\chi^2$\\ \hline
 $-3$	&$0.364 \pm0.004$ 	&56.8 \\
 $-2$	&$0.237 \pm0.002$ 	&9.43 \\
 $-1$	&$0.131 \pm0.001$ 	&2.16 \\
@@ -263,7 +263,7 @@ $2$	&$-0.165 \pm0.006$ 	&182\\ \hline
 &N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)\\ \notag
 &\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d
 \end{align}
-これを種々の$\epsilon/\omega_z$に対して波長を横軸として図示すると図\ref{analysis_fig_N1}のようになる。各種パラメータには表\ref{analysis_tbl_parameter}の値を用いた。
+これを種々の$\epsilon/|\omega_z|$に対して波長を横軸として図示すると図\ref{analysis_fig_N1}のようになる。各種パラメータには表\ref{analysis_tbl_parameter}の値を用いた。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{analysis/D/N1.pdf}
@@ -271,7 +271,7 @@ $2$	&$-0.165 \pm0.006$ 	&182\\ \hline
 \end{figure}
 
 \paragraph{実験結果}
-以下の表\ref{analysis_tbl_D}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$D$の値を示し、中心波長$\lambda$と$D$の関係を図\ref{analysis_fig_D}に表す。
+以下の表\ref{analysis_tbl_D}に波長領域$\lambda \pm 0.07$\AA における実験データから得られた$D$の値を示し、中心波長$\lambda$と$D$の関係を図\ref{analysis_fig_D}に表す。
 \begin{figure}[H]
 \begin{minipage}{0.35\hsize}
 \centering
@@ -304,11 +304,11 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 \end{figure}
 
 \paragraph{解析}
-パラメータ$C$に対する考察の結果から$\epsilon/\omega_z=0.131$としたときの$D$の理論値を実験値と共に図\ref{analysis_fig_D_N1}に表す。このときreduced$\chi^2=74/12=6.2$となり、理論値と実験値の一致はあまりよくない。全ての波長において実験値は理論値よりも上にずれている。これは粒子数の変動の中心が数の多い方へシフトしていることを意味しており、バックグラウンドの存在が示唆される。
+パラメータ$C$に対する考察の結果から$\epsilon/|\omega_z|=0.131$としたときの$D$の理論値を実験値と共に図\ref{analysis_fig_D_N1}に表す。このときreduced$\chi^2=74/12=6.2$となり、理論値と実験値の一致はあまりよくない。全ての波長において実験値は理論値よりも上にずれている。これは粒子数の変動の中心が数の多い方へシフトしていることを意味しており、バックグラウンドの存在が示唆される。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{analysis/D/D_F_N1.pdf}
-\caption{波長に対する$D$の実験値と$\epsilon/\omega_z=0.131$のときの理論値}\label{analysis_fig_D_N1}
+\caption{波長に対する$D$の実験値と$\epsilon/|\omega_z|=0.131$のときの理論値}\label{analysis_fig_D_N1}
 \end{figure}
 
 \paragraph{結論}
@@ -324,7 +324,7 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 N_4&=\sqrt{N_2^2+N_3^2} \notag \\
 &=2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d\sqrt{\left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)}
 \end{align}
-である。これを種々の$\epsilon/\omega_z$に対して波長を横軸として図示すると図\ref{analysis_fig_N4}のようになる。各種パラメータには表\ref{analysis_tbl_parameter}の値を用いた。図\ref{analysis_fig_N4}は波長に対する$N_1$を描いた図\ref{analysis_fig_N1}を0.5を境に反転したように見える。実際、$\omega_{r1}=\omega_{r2}$のときは$N_1+N_4=1$が厳密になりたつ。つまり上流下流のスピンフリッパーで$\omega_r$が等しいときは共鳴のいかんに関わらず常に干渉の波の頂上は1に達する(図\ref{Resonance_fig_interference}参照)。
+である。これを種々の$\epsilon/|\omega_z|$に対して波長を横軸として図示すると図\ref{analysis_fig_N4}のようになる。各種パラメータには表\ref{analysis_tbl_parameter}の値を用いた。図\ref{analysis_fig_N4}は波長に対する$N_1$を描いた図\ref{analysis_fig_N1}を0.5を境に反転したように見える。実際、$\omega_{r1}=\omega_{r2}$のときは$N_1+N_4=1$が厳密になりたつ。つまり上流下流のスピンフリッパーで$\omega_r$が等しいときは共鳴のいかんに関わらず常に干渉の波の頂上は1に達する(図\ref{Resonance_fig_interference}参照)。
 \begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{analysis/A/N4.pdf}
@@ -332,7 +332,7 @@ N_4&=\sqrt{N_2^2+N_3^2} \notag \\
 \end{figure}
 
 \paragraph{実験結果}
-以下の表\ref{analysis_tbl_A}に波長領域$\lambda \pm 0.07 \AA$における実験データから得られた$A$の値を示し、中心波長$\lambda$と$A$の関係を図\ref{analysis_fig_A}に表す。
+以下の表\ref{analysis_tbl_A}に波長領域$\lambda \pm 0.07$\AA における実験データから得られた$A$の値を示し、中心波長$\lambda$と$A$の関係を図\ref{analysis_fig_A}に表す。
 \begin{figure}[H]
 \begin{minipage}{0.35\hsize}
 \centering
@@ -365,11 +365,11 @@ $\lambda$[\AA] &  $A(実験)$\\ \hline
 \end{figure}
 
 \paragraph{解析}
-パラメータ$C$に対する考察の結果から$\epsilon/\omega_z=0.131$としたときの$A$の理論値を実験値と共に図\ref{analysis_fig_A_N4}に表す。このときreduced$\chi^2=1041/12=87$となり、理論値と実験値の一致は悪い。全ての波長において実験値は理論値よりも大きく下にずれている。これは干渉波の振幅が理論の予想より小さいことを意味する。この原因として、バックグラウンドによって波の高さの振動中心が上へずれたことと、位相のずれた波が重ね合わさり振幅が減衰したことの2つが考えられる。
+パラメータ$C$に対する考察の結果から$\epsilon/|\omega_z|=0.131$としたときの$A$の理論値を実験値と共に図\ref{analysis_fig_A_N4}に表す。このときreduced$\chi^2=1041/12=87$となり、理論値と実験値の一致は悪い。全ての波長において実験値は理論値よりも大きく下にずれている。これは干渉波の振幅が理論の予想より小さいことを意味する。この原因として、バックグラウンドによって波の高さの振動中心が上へずれたことと、位相のずれた波が重ね合わさり振幅が減衰したことの2つが考えられる。
 \begin{figure}[h]
 \centering
 \includegraphics[width=10cm]{analysis/A/A_F_N4.pdf}
-\caption{波長に対する$D$の実験値と$\epsilon/\omega_z=0.131$のときの理論値}
+\caption{波長に対する$D$の実験値と$\epsilon/|\omega_z|=0.131$のときの理論値}\label{analysis_fig_A_N4}
 \end{figure}
 
 \paragraph{結論}
