@@ -20,7 +20,7 @@
 \end{equation}
 となる。ここで$\epsilon=\omega_s/2-\omega_z,\omega_A=\sqrt{\epsilon^2+\omega_r^2}$であり、$\omega_z=|\mu_n|B_z,\omega_r=|\mu_n|B_r$、$\mu_n$は中性子の磁気モーメント、$d$は領域IIの幅である。
 
-いま$\omega_r/|\omega_z|=0.5$とし、$\epsilon/|\omega_z|=0,0.3,0.5,1.0$の各場合についてスピンフリッパーを通過した中性子のスピン反転率($=1-|\psi_\mathrm{III}^+|^2$)と$\omega_r d/v$の関係を図\ref{Resonance_fig_reversalrate}に表す。
+いま$\epsilon/|\omega_z|=0,0.3,0.5,1.0$の各場合についてスピンフリッパーを通過した中性子のスピン反転率($=1-|\psi_\mathrm{III}^+|^2$)と$\omega_r d/v$の関係を図\ref{Resonance_fig_reversalrate}に表す。
 図\ref{Resonance_fig_reversalrate}より
 \begin{equation}
 \epsilon=\frac{\omega_s}{2}-\omega_z=0 \label{Resonance_resonance}
@@ -38,191 +38,37 @@
 \subsection{Why?\ $\sim$スピンフリッパーの共鳴はなぜ必要か$\sim$}
 スピンフリッパーの共鳴は本実験での干渉がはっきり見えるかどうかの鍵を握っている。ここではスピンフリッパー共鳴の重要性が明らかとなる。
 
-\paragraph{舞台とあらすじ}
 一様磁場中に、理想化されたRFスピンフリッパーふたつとシフタコイルひとつが置かれた状況を考える。系は7つの領域I,II,III,IV,V,VI,VIIからなり、全体に$z$方向一様磁場$B_z$がかけられ、それに加えて領域II,VIに$x$方向振動磁場$2B_r\cos\omega_s t$が、領域IVに$z$方向一様磁場$B$がかけられている。
 \begin{figure}[h]
 \centering
 \includegraphics[height=3cm]{resonance/whatwhyhow/Resonance_why_setting.pdf}
 \end{figure}
 
-これから述べるように、スピン上向きの中性子が領域Iから入射し、領域I$\sim$VIを通って領域VIIに抜けるとき、領域VIIにおいてスピン上向き中性子を観測する確率は
+\ref{nonreso_sec}章で述べたように、スピン上向きの中性子が領域Iから入射し、領域I$\sim$VIを通って領域VIIに抜けるとき、領域VIIにおいてスピン上向き中性子を観測する確率は、共鳴からのずれを表すパラメータ$\epsilon$と中性子の速度$v$に依存した係数$N_1,N_2,N_3$を用いて
 \begin{equation}
-|\psi_\mathrm{VII}^+|^2=N_1(\epsilon)-N_2(\epsilon) \cos (\phi -\Delta(\epsilon)) -N_3(\epsilon) \sin(\phi-\Delta(\epsilon)) \label{Resonance_interference}
+I=N_1-N_2\cos\left(\frac{2}{v}(\omega d'-\epsilon L')\right) -N_3\sin\left(\frac{2}{v}(\omega d'-\epsilon L')\right) \label{analysis_theory_ippan}
 \end{equation}
-のように書ける。ここで$\epsilon=\omega_s/2-\omega_z$であり、$\phi$はシフタコイル磁場によって生じた位相差、$\Delta(\epsilon)$は$\epsilon$のみに依存した定数位相である。
+と表せる。ここで$\omega$は位相シフタコイルの磁場$B$を用いて$\omega=|\mu_n|B$と表される量であり、$d',L'$はそれぞれ位相シフタコイルの幅、2つのスピンフリッパー間距離である。さらに$N_4=\sqrt{N_2^2+N_3^2}$として
+\begin{equation}
+\cos \phi=\frac{N_2}{N_4}, \quad \sin \phi=\frac{N_3}{N_4}
+\end{equation}
+で$\phi$を定義すれば、干渉パターンは
+\begin{equation}
+I=N_1-N_4\cos\left(\frac{2}{v}(\omega d'-\epsilon L')-\phi\right)\label{Resonance_interference}
+\end{equation}
+と書き直される。
 
-いま、ある$\epsilon$に対して、シフタコイルの磁場を変えながら領域VIIでのスピン上向き中性子の数を計測すると式(\ref{Resonance_interference})の干渉パターンが得られるが、その見えやすさ(ビジビリティ)は$\epsilon$によって異なる。例えば$N_2/N1=1,N_3/N_1=0$のときは振幅の大きなはっきりとした(ビジビリティの高い)干渉パターンが得られるが、$N_2/N_1,N_3/N_1 \ll 1$のときは干渉パターンはほとんど観測できない(ビジビリティが低い)。ビジビリティを表す指標$V$を
+いま、ある$\epsilon$に対して、シフタコイルの磁場を変えながら領域VIIでのスピン上向き中性子の数を計測すると式(\ref{Resonance_interference})の干渉パターンが得られるが、その見えやすさ(ビジビリティ)は$\epsilon$によって異なる。例えば$N_4/N1=1$のときは振幅の大きなはっきりとした(ビジビリティの高い)干渉パターンが得られるが、$N_4/N_1 \ll 1$のときは干渉パターンはほとんど観測できない(ビジビリティが低い)。そこでビジビリティを表す指標$V$を
 \begin{equation}
-V=\sqrt{\left(\frac{N_2}{N_1}\right)^2+\left(\frac{N_3}{N_1}\right)^2}
+V=\frac{N_4}{N_1}
 \end{equation}
-で定義すると、$0 \le V \le 1$であり、$V$が大きい程ビジビリティが高い。$\epsilon=0$のとき$V=1$とできることが最後に示される。
+で定義すると、$0 \le V \le 1$であり、$V$が大きい程ビジビリティが高い。
 
-すなわちスピンフリッパーを共鳴させる目的は、本実験で得られる干渉パターンのビジビリティを高めるためである。
-
-%\begin{center}(中略)\end{center}
-
-
-%\begin{comment}
-\paragraph{仮定と拝借}
-今回は最初から中性子の入射エネルギーはポテンシャルに比べて十分大きいとし、全ての境界で反射は無視する。すると、前節での結果をそのまま拝借することができる。すなわち、領域I,II,IIIにおける波動関数はそれぞれ
-\begin{align}
-\psi_\mathrm{I}(x,t)&=\begin{pmatrix} 1\\0\end{pmatrix} \e^{i (k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t}\\
-\psi_\mathrm{II}(x,t)&=\begin{pmatrix} \left(\sin^2 \frac{\theta}{2} \e^{i\frac{\omega_A}{v}x} +\cos^2 \frac{\theta}{2} \e^{-i\frac{\omega_A}{v}x} \right) \e^{i(k_0-\frac{\omega_s}{v}) x} \e^{-i\omega_0 t} \\ \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}x}-\e^{i\frac{\omega_A}{v}x}\right) \e^{i(k_0-\frac{\omega_s}{v}) x} \e^{-i(\omega_0-\omega_s) t}\end{pmatrix}\\
-\psi_\mathrm{III}(x,t)&=\begin{pmatrix} \left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v} d} \e^{i(k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t} \\ -i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d  \, \e^{i\frac{\epsilon}{v}d} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x}\e^{-i(\omega_0-\omega_s)t} \end{pmatrix}
-\end{align}
-と書ける。ここで$\epsilon=\omega_s/2-\omega_z,\omega_A=\sqrt{\epsilon^2+\omega_r^2}$であり、$\omega_z=|\mu_n|B_z,\omega_r=|\mu_n|B_r$。$\omega_0$,$v$はそれぞれ中性子の入射エネルギー、速度であり、$k_0=\sqrt{2m\omega_0}$である。その他の記号は前節参照。
-
-\paragraph{領域IV}
-領域IVにおけるShr$\ddot{\mathrm{o}}$dinger方程式は
-\begin{equation}
-i\frac{\del \psi_\mathrm{IV}}{\del t}= \left[-\frac{1}{2m} \frac{\del^2}{\del x^2} +(\omega_z+\omega) \sigma_z\right] \psi_\mathrm{IV}
-\end{equation}
-ここで$\omega=|\mu_n|B$とした。領域IIIとIVの境界でエネルギーは変化しないので、領域IVにおけるスピン上下成分の波数$k^\pm_\mathrm{IV}$は
-\begin{align}
-k^+_\mathrm{IV}&=\sqrt{2m(\omega_0-(\omega_z+\omega))}\simeq k_0 -\frac{\omega_z}{v}-\frac{\omega}{v} \\
-k^-_\mathrm{IV}&=\sqrt{2m(\omega_0-\omega_s+(\omega_z+\omega))}\simeq k_0 -\frac{\omega_s}{v}+\frac{\omega_z}{v}+\frac{\omega}{v}
-\end{align}
-となる。反射波を無視し、領域IIIとIVの境界($x=l_1$)で波動関数を接続すると
-\begin{equation}
-\psi_\mathrm{IV}=\begin{pmatrix} \left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v} d} \e^{-i\frac{\omega}{v} (x-l_1)} \e^{i(k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t} \\ -i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d  \, \e^{i\frac{\epsilon}{v}d} \e^{i\frac{\omega}{v}(x-l_1)} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x}\e^{-i(\omega_0-\omega_s)t} \end{pmatrix}
-\end{equation}
-を得る。
-
-\paragraph{領域V}
-領域VにおけるShr$\ddot{\mathrm{o}}$dinger方程式は領域I,IIIと等しく、
-\begin{equation}
-i\frac{\del \psi_\mathrm{V}}{\del t}= \left[-\frac{1}{2m} \frac{\del^2}{\del x^2} +\omega_z \sigma_z\right] \psi_\mathrm{V}
-\end{equation}
-である。領域VIと同様にして、反射波を無視し、領域IVとVの境界($x=l_2$)で波動関数を接続すると
-\begin{equation}
-\psi_\mathrm{V}=\begin{pmatrix} \left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v} d} \e^{-i\frac{\omega}{v} d'} \e^{i(k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t} \\ -i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d  \, \e^{i\frac{\epsilon}{v}d} \e^{i\frac{\omega}{v} d'} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x}\e^{-i(\omega_0-\omega_s)t} \end{pmatrix} \label{Resonance_psi5}
-\end{equation}
-を得る。ここで$l_2-l_1=d'$を用いた。
-
-\paragraph{領域VI}
-領域VIにおける磁場を、領域IIと同じ$z$方向一様磁場と同位相の$x$方向振動磁場
-\begin{equation}
-\bm{B}_\mathrm{VI}=\hat{\bm{x}}(2B_r)\cos\omega_s t +\hat{\bm{z}}B_z
-\end{equation}
-とすると、$B_r \ll B_z$のとき
-\begin{equation}
-\bm{B}_\mathrm{VI} \simeq \hat{\bm{x}} B_r\cos \omega_s t+\hat{\bm{y}} B_r \sin \omega_s t+\hat{\bm{z}} B_z
-\end{equation}
-と近似でき、前節と同じ議論により領域VIにおける波動関数は次のように書ける:
-\begin{equation}
-\psi_\mathrm{VI}=\begin{pmatrix} \left(D^+\cos\frac{\theta}{2} \e^{-i\frac{\omega_A}{v} x}-D^-\sin\frac{\theta}{2} \e^{i\frac{\omega_A}{v}x} \right) \e^{i(k_0-\frac{\omega_s}{2v})x} \e^{-i\omega_0 t} \\ \left(D^+\sin\frac{\theta}{2}\e^{-i\frac{\omega_A}{v} x}+D^-\cos\frac{\theta}{2}\e^{i\frac{\omega_A}{v} x}\right) \e^{i(k_0-\frac{\omega_s}{2v})x} \e^{-i(\omega_0-\omega_s) t} \end{pmatrix}
-\end{equation}
-ここで入射エネルギーは十分大きいとして反射波を無視し、波数を
-\begin{equation}
-k^\pm_1 =\sqrt{2m\left(\omega_0-\frac{\omega_s}{2}\mp\omega_A\right)} \simeq k_0 -\frac{\omega_s}{2v} \mp\frac{\omega_A}{v}
-\end{equation}
-と近似した。また、$\cos \theta = -\epsilon/\omega_A,\sin\theta=\omega_r/\omega_A$であり、$D^\pm$は定数である。
-
-\paragraph{領域VとVIの接続}簡単のため式(\ref{Resonance_psi5})で
-\begin{align}
-\alpha^+ &= \left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v} d} \e^{-i\frac{\omega}{v} d} \label{Resonance_alpha+}\\
-\alpha^-&=-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d  \, \e^{i\frac{\epsilon}{v}d} \e^{i\frac{\omega}{v} d} \label{Resonance_alpha-}
-\end{align}
-とおき、領域Vでの波動関数を
-\begin{equation}
-\psi_\mathrm{V} =\begin{pmatrix} \alpha^+ \e^{i(k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t}\\ \alpha^- \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x}\e^{-i(\omega_0-\omega_s)t} \end{pmatrix}
-\end{equation}
-とかく。領域VとVIの境界($x=l_3$)における接続を考えて、次の2式を得る:
-\begin{align}
-&\left\{\begin{array}{l} \left(D^+ \cos\frac{\theta}{2} \e^{-i\frac{\omega_A}{v} l_3}-D^-\sin\frac{\theta}{2} \e^{i\frac{\omega_A}{v}l_3}\right) \e^{i(k_0-\frac{\omega_s}{2v})l_3} =\alpha^+ \e^{i(k_0-\frac{\omega_z}{v})l_3} \\ \left(D^+\sin\frac{\theta}{2}\e^{-i\frac{\omega_A}{v} l_3}+D^-\cos\frac{\theta}{2}\e^{i\frac{\omega_A}{v} l_3}\right) \e^{i(k_0-\frac{\omega_s}{2v})l_3} =\alpha^- \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})l_3}\end{array} \right. \notag \\
-&\Rightarrow \left\{\begin{array}{l} D^+ \cos\frac{\theta}{2} \e^{-i\frac{\omega_A}{v} l_3}-D^-\sin\frac{\theta}{2} \e^{i\frac{\omega_A}{v}l_3} =\alpha^+ \e^{i\frac{\epsilon}{v}l_3} \\ D^+\sin\frac{\theta}{2}\e^{-i\frac{\omega_A}{v} l_3}+D^-\cos\frac{\theta}{2}\e^{i\frac{\omega_A}{v} l_3} =\alpha^- \e^{-i\frac{\epsilon}{v}l_3}\end{array} \right. \notag \\
-&\Rightarrow \left\{\begin{array}{l} D^+ =\left(\alpha^+ \cos\frac{\theta}{2}\e^{i\frac{\epsilon}{v}l_3} +\alpha^- \sin\frac{\theta}{2}\e^{-i\frac{\epsilon}{v}l_3}\right) \e^{i\frac{\omega_A}{v} l_3} \\ D^-=\left(-\alpha^+ \sin\frac{\theta}{2} \e^{i\frac{\epsilon}{v}l_3} +\alpha^-\cos\frac{\theta}{2}\e^{-i\frac{\epsilon}{v}l_3} \right)\e^{-i\frac{\omega_A}{v} l_3} \end{array} \right.
-\end{align}
-したがって
-\begin{equation}
-\psi_\mathrm{VI} =\left( \begin{array}{l} \left[\alpha^+ \left(\cos^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}(x-l_3)} +\sin^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}(x-l_3)} \right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{2cm}\left. +\alpha^- \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}(x-l_3)}-\e^{i\frac{\omega_A}{v}(x-l_3)}\right)\e^{-i\frac{\epsilon}{v}l_3}\right]\e^{i(k_0-\frac{\omega_s}{2v})x}\e^{-\omega_0t} \\ \left[\alpha^+ \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}(x-l_3)}-\e^{i\frac{\omega_A}{v}(x-l_3)}\right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{2cm} \left. +\alpha^- \left(\sin^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}(x-l_3)} +\cos^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}(x-l_3)} \right) \e^{-i\frac{\epsilon}{v}l_3}\right] \e^{i(k_0-\frac{\omega_s}{2v})x} \e^{-i(\omega_0-\omega_s) t} \end{array}\right)
-\end{equation}
-となる。
-
-\paragraph{領域VII}
-領域VにおけるShr$\ddot{\mathrm{o}}$dinger方程式は領域I,III,Vと同じく
-\begin{equation}
-i\frac{\del \psi_\mathrm{VII}}{\del t}= \left[-\frac{1}{2m} \frac{\del^2}{\del x^2} +\omega_z \sigma_z\right] \psi_\mathrm{VII}
-\end{equation}
-であり、領域VIとVIIの境界($x=l_4$)で波動関数を接続すると次式を得る:
-\begin{align}
-\psi_\mathrm{VII} &=\left( \begin{array}{l} \left[\alpha^+ \left(\cos^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}(l_4-l_3)} +\sin^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}(l_4-l_3)} \right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{1cm}\left. +\alpha^- \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}(l_4-l_3)}-\e^{i\frac{\omega_A}{v}(l_4-l_3)}\right)\e^{-i\frac{\epsilon}{v}l_3}\right]\e^{i(k_0-\frac{\omega_s}{2v})l_4} \e^{i(k_0-\frac{\omega_z}{v})(x-l_4)} \e^{-\omega_0t} \\ \left[\alpha^+ \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}(l_4-l_3)}-\e^{i\frac{\omega_A}{v}(l_4-l_3)}\right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{1cm} \left. +\alpha^- \left(\sin^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}(l_4-l_3)} +\cos^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}(l_4-l_3)} \right) \e^{-i\frac{\epsilon}{v}l_3}\right] \e^{i(k_0-\frac{\omega_s}{2v})l_4} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})(x-l_4)} \e^{-i(\omega_0-\omega_s) t} \end{array}\right) \notag \\
-&=\left( \begin{array}{l} \left[\alpha^+ \left(\cos^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}d} +\sin^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}d} \right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{2cm}\left. +\alpha^- \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}d}-\e^{i\frac{\omega_A}{v}d}\right)\e^{-i\frac{\epsilon}{v}l_3}\right]\e^{-i\frac{\epsilon}{v}l_4}\e^{i(k_0-\frac{\omega_z}{v})x} \e^{-\omega_0t} \\ \left[\alpha^+ \sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}d}-\e^{i\frac{\omega_A}{v}d}\right)\e^{i\frac{\epsilon}{v}l_3} \right. \\ \hspace{2cm} \left. +\alpha^- \left(\sin^2\frac{\theta}{2}\e^{-i\frac{\omega_A}{v}d} +\cos^2\frac{\theta}{2}\e^{i\frac{\omega_A}{v}d} \right) \e^{-i\frac{\epsilon}{v}l_3}\right] \e^{i\frac{\epsilon}{v}l_4} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x} \e^{-i(\omega_0-\omega_s) t} \end{array}\right)
-\end{align}
-ここで$l_4-l_3=d$を用いた。さらに$\cos\theta=-\epsilon/\omega_A,\sin\theta=\omega_r/\omega_A$より
-\begin{align}
-&\cos^2 \frac{\theta}{2} \e^{-i\frac{\omega_A}{v}d} +\sin^2 \frac{\theta}{2} \e^{i\frac{\omega_A}{v}d} =\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d \\
-&\sin^2 \frac{\theta}{2} \e^{-i\frac{\omega_A}{v}d} +\cos^2 \frac{\theta}{2} \e^{i\frac{\omega_A}{v}d} =\left(\cos^2 \frac{\theta}{2} \e^{-i\frac{\omega_A}{v}d} +\sin^2 \frac{\theta}{2} \e^{i\frac{\omega_A}{v}d}\right)^\dagger=\cos \frac{\omega_A}{v}d -i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d \\
-&\sin\frac{\theta}{2}\cos\frac{\theta}{2} \left(\e^{-i\frac{\omega_A}{v}d}-\e^{i\frac{\omega_A}{v}d}\right) = -i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d
-\end{align}
-を用い、(\ref{Resonance_alpha+}),(\ref{Resonance_alpha-})の$\alpha^\pm$を代入して
-\begin{align}
-\psi_\mathrm{VII} &= \left( \begin{array}{l} \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}(l_3-d)}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{2cm}\left. +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}(l_3-d)}\e^{i\frac{\omega}{v}d'} \right]\e^{-i\frac{\epsilon}{v}l_4}\e^{i(k_0-\frac{\omega_z}{v})x} \e^{-\omega_0t} \\ \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{i\frac{\epsilon}{v}(l_3-d)}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{1cm} \left. +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right) \left(\cos \frac{\omega_A}{v}d -i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v}(l_3-d)}\e^{i\frac{\omega}{v}d'} \right] \e^{i\frac{\epsilon}{v}l_4} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x} \e^{-i(\omega_0-\omega_s) t} \end{array}\right) \notag \\
-&=\left( \begin{array}{l} \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{2cm}\left. +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} \right]\e^{-i\frac{\epsilon}{v}L}\e^{i(k_0-\frac{\omega_z}{v})x} \e^{-\omega_0t} \\ \left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right) \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{2cm} \left. +\left(\cos \frac{\omega_A}{v}d -i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} \right] \e^{i\frac{\epsilon}{v}L} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x} \e^{-i(\omega_0-\omega_s) t} \end{array}\right)
-\end{align}
-となる。ここで$l_3-d=L',l_4=L$とした。
-%\end{comment}
-
-
-\paragraph{結末}
-以上のようにして、領域Iで
-\begin{equation}
-\psi_\mathrm{I}(x,t)=\begin{pmatrix} 1\\0\end{pmatrix} \e^{i (k_0-\frac{\omega_z}{v})x}\e^{-i\omega_0t}
-\end{equation}
-と表された入射中性子は領域II$\sim$VIを通って領域VIIで
-\begin{equation}
-\psi_\mathrm{VII}(x,t) =\left( \begin{array}{l} \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{2cm}\left. +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} \right]\e^{-i\frac{\epsilon}{v}L}\e^{i(k_0-\frac{\omega_z}{v})x} \e^{-\omega_0t} \\ \left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right) \left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} \right. \\ \hspace{2cm} \left. +\left(\cos \frac{\omega_A}{v}d -i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right) \e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} \right] \e^{i\frac{\epsilon}{v}L} \e^{i(k_0-\frac{\omega_s}{v}+\frac{\omega_z}{v})x} \e^{-i(\omega_0-\omega_s) t} \end{array}\right)
-\end{equation}
-という状態をとることがわかった。したがって、領域VIIでスピン上向き中性子を観測する確率は
-\begin{align}
-|\psi_\mathrm{VII}^+|^2&=\Biggl| \left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} \Biggr|^2 \notag \\
-&=\left[\left(\cos \frac{\omega_A}{v}d +i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'} +\left(-i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'}\right] \notag\\
-&\hspace{2cm} \times \left[\left(\cos \frac{\omega_A}{v}d -i\frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{-i\frac{\epsilon}{v}L'}\e^{i\frac{\omega}{v}d'} +\left(i \frac{\omega_r}{\omega_A} \sin \frac{\omega_A}{v}d\right)^2\e^{i\frac{\epsilon}{v}L'}\e^{-i\frac{\omega}{v}d'}\right] \notag \\
-&=\left(\cos^2 \frac{\omega_A}{v}d +\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d\right)^2+\left(\frac{\omega_r}{\omega_A}\right)^4 \sin^4 \frac{\omega_A}{v}d \notag \\
-&\hspace{1cm}  -2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d \left[\left(\cos^2 \frac{\omega_A}{v}d -\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d\right) \cos \left(\frac{2}{v}(\omega d'-\epsilon L')\right) \right. \notag \\
-&\hspace{6.3cm} \left.+2 \frac{\epsilon}{\omega_A} \sin \frac{\omega_A}{v}d \cos \frac{\omega_A}{v}d \sin \left(\frac{2}{v}(\omega d'-\epsilon L')\right)\right]
-\end{align}
-となる。
-\begin{align}
-&N_1 = \left(\cos^2 \frac{\omega_A}{v}d +\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d\right)^2+\left(\frac{\omega_r}{\omega_A}\right)^4 \sin^4 \frac{\omega_A}{v}d \\
-&N_2 = 2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d \left(\cos^2 \frac{\omega_A}{v}d -\left(\frac{\epsilon}{\omega_A}\right)^2 \sin^2 \frac{\omega_A}{v}d\right) \\
-&N_3 = 4\frac{\epsilon}{\omega_A} \left(\frac{\omega_r}{\omega_A}\right)^2\sin^3\frac{\omega_A}{v}d \cos \frac{\omega_A}{v}d
-\end{align}
-とおけばこれを
-\begin{equation}
-|\psi_\mathrm{VII}^+|^2 =N_1 -N_2 \cos \left(\frac{2}{v}(\omega d'-\epsilon L')\right)-N_3 \sin  \left(\frac{2}{v}(\omega d'-\epsilon L')\right) \label{Resonance_interference2}
-\end{equation}
-と書くことができる。
-
-いま、ある$\epsilon$に対して、シフタコイルの磁場を変えながら領域VIIでのスピン上向き中性子の数を計測すると式(\ref{Resonance_interference2})の干渉パターンが得られるが、その見えやすさ(ビジビリティ)は$\epsilon$によって異なる。例えば$N_2/N_1=1,N_3/N_1=0$のときは振幅の大きなはっきりとした(ビジビリティの高い)干渉パターンが得られるが、$N_2/N_1,N_3/N_1 \ll 1$のときは干渉パターンはほとんど観測できない(ビジビリティが低い)。ビジビリティを表す指標$V$を
-\begin{equation}
-V=\sqrt{\left(\frac{N_2}{N_1}\right)^2+\left(\frac{N_3}{N_1}\right)^2}
-\end{equation}
-で定義すると
-\begin{equation}
-V=\frac{2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d \left(\cos^2 \frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d\right)}{\left(\cos^2 \frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d\right)^2+\left(\frac{\omega_r}{\omega_A}\right)^4\sin^4\frac{\omega_A}{v}d}
-\end{equation}
-となるから$0 \le V \le 1$であり、$V$が大きい程ビジビリティが高い。
-
-\begin{comment}
-ここで$\Omega_A = \omega_A d/v,\Omega_r= \omega_r d/v,\mathcal{E}=\epsilon d/v,\Omega=\omega d'/v,\mathcal{L}'=L'/d$と無次元化すると
-\begin{align}
-&N_1 = \left(\cos^2 \Omega_A +\left(\frac{\mathcal{E}}{\Omega_A}\right)^2 \sin^2 \Omega_A \right)^2+\left(\frac{\Omega_r}{\Omega_A}\right)^4 \sin^4 \frac{\Omega_A}{v}d \\
-&N_2 = 2\left(\frac{\Omega_r}{\Omega_A}\right)^2\sin^2\Omega_A \left(\cos^2 \Omega_A -\left(\frac{\mathcal{E}}{\Omega_A}\right)^2 \sin^2 \Omega_A\right) \\
-&N_3 = 4\frac{\mathcal{E}}{\Omega_A} \left(\frac{\Omega_r}{\Omega_A}\right)^2\sin^3\Omega_A \cos \Omega_A \\
-&|\psi_\mathrm{VII}|^2 =N_1 -N_2 \cos 2(\Omega-\mathcal{E} \mathcal{L}')-N_3 \sin 2(\Omega -\mathcal{E} \mathcal{L}')
-\end{align}
-\end{comment}
-
-\begin{comment}
-ここで$E=\epsilon d/v$と無次元化し、$\omega_rd/v=\pi/4$のときの$E$と$V$の関係を図示すると図\ref{Resonance_fig_visivility}のようになる。$E=0$のとき$V=1$となり、ビジビリティが最高となることがわかる。また$-0.2 \le E \le 0.2$でも$V \simeq 1$でビジビリティは十分高い。実際、$\omega_rd/v=\pi/4$,$E=0,0.2,0.5,1,2$のときに$\Omega=\omega d'/v$と$|\psi_\mathrm{VII}|^2$の関係を図示すると図\ref{Resonance_fig_interference}のようになる。ただし$L'/d=10$とした。
-\end{comment}
-
-いま$\omega_r/\omega_z=0.25$とし、$\epsilon/\omega_z=0,0.3,0.5,1.0$の各場合について干渉パターンのビジビリティ$V$と$\omega_r d/v$の関係を図\ref{Resonance_fig_visivility}に表す。図\ref{Resonance_fig_visivility}より共鳴条件
+いま$\epsilon/|\omega_z|=0,0.3,0.5,1.0$の各場合について干渉パターンのビジビリティ$V$と$\omega_r d/v$の関係を図\ref{Resonance_fig_visivility}に表す。図\ref{Resonance_fig_visivility}より共鳴条件
 $
-\epsilon=\frac{\omega_s}{2}-\omega_z=0 \label{Resonance_resonance}
+\epsilon=\frac{\omega_s}{2}-\omega_z=0
 $
-がなりたてば、$\omega_r d/v =(2n+1)\pi/4 \ (n =0,1,2,\cdots)$を満たす速度の中性子に対して、干渉パターンのビジビリティ$V=1$になることがわかる。逆に$\epsilon \neq 0$のときはどのような速度の中性子に対してもビジビリティは1となり得ない。実際、$\omega_rd/v=\pi/4$,$\epsilon/\omega_z=0,0.3,0.5,1.0$のときに$\chi=\omega d'/v$と$|\psi_\mathrm{VII}|^2$の関係を図示すると図\ref{Resonance_fig_interference}のようになる。ただし$L'/d=10$とした。
+がなりたてば、$\omega_r d/v =(2n+1)\pi/4 \ (n =0,1,2,\cdots)$を満たす速度の中性子に対して、干渉パターンのビジビリティ$V=1$になることがわかる。逆に$\epsilon \neq 0$のときはどのような速度の中性子に対してもビジビリティは1となり得ない。実際、$\omega_rd/v=\pi/4$,$\epsilon/|\omega_z|=0,0.3,0.5,1.0$のときに$\chi=\omega d'/v$と$|\psi_\mathrm{VII}|^2$の関係を図示すると図\ref{Resonance_fig_interference}のようになる。ただし$L'/d=10$とした。すなわちスピンフリッパーを共鳴させる目的は、本実験で得られる干渉パターンのビジビリティを高めるためである。
 
 \begin{figure}[h]
 %\begin{minipage}{0.5\hsize}
@@ -235,25 +81,25 @@ $
 %\begin{minipage}{0.5\hsize}
 %\begin{center}
 \includegraphics[width=10cm]{resonance/whatwhyhow/resonance_interference1.pdf}
-\caption{干渉}
+\caption{干渉パターン}
 \label{Resonance_fig_interference}
 \end{center}
 %\end{minipage}
+\vspace{-1cm}
 \end{figure}
 
-すなわちスピンフリッパーを共鳴させる目的は、実験で得られる干渉パターンのビジビリティを高めるためである。
-\renewcommand{\arraystretch}{1}
+
 
 \clearpage
 \subsection{How?\ $\sim$スピンフリッパーを共鳴させるには$\sim$}
 実際にスピンフリッパーを共鳴させるにはどうしたらよいだろう。ここではその実現方法を考え、実際に実験で用いた装置と従った手順を紹介する。
 
 \paragraph{実現方法}
-\ref{Resonance_what}節と同じく、一様磁場中にスピンフリッパーがひとつ置かれており、スピン上向き中性子を領域Iから入射させる場合を考える。このとき領域IIIでスピン上向き中性子を観測する確率は式(\ref{Resonance_1-reversal})より
+\ref{Resonance_what}節と同じく、一様磁場中にスピンフリッパーがひとつ置かれており、スピン上向き中性子を領域Iから入射させる場合を考える。このとき領域IIIでスピン上向き中性子を観測する確率は式(\ref{Resonance_flip})より
 \begin{equation}
-\bigl|\psi_\mathrm{III}^+\bigr|^2 =\cos^2 \frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d
+|\psi_\mathrm{III}^+|^2 =\cos^2 \frac{\omega_A}{v}d+\left(\frac{\epsilon}{\omega_A}\right)^2\sin^2\frac{\omega_A}{v}d
 \end{equation}
-であらわされる。これを$\omega_r/\omega_z=0.5$のときに、$\epsilon/\omega_z=0,0.3,0.5,1.0$の各場合について$\omega_r d/v$に対して図示すると図\ref{Resonance_fig_1-reversal}のようになる。図\ref{Resonance_fig_1-reversal}より、領域IIIでスピン上向き中性子を観測する確率の、速度に対する最小値は共鳴条件(\ref{Resonance_resonance2})
+であらわされる。これを$\omega_r/\omega_z=0.5$のときに、$\epsilon/\omega_z=0,0.3,0.5,1.0$の各場合について$\omega_r d/v$に対して図示すると図\ref{Resonance_fig_1-reversal}のようになる。図\ref{Resonance_fig_1-reversal}より、領域IIIでスピン上向き中性子を観測する確率の、速度に対する最小値は共鳴条件(\ref{Resonance_resonance})
 \[
 \epsilon=\frac{\omega_s}{2}-\omega_z=0
 \]
@@ -541,7 +387,7 @@ $3.0{\AA}-4.5{\AA}での規格化粒子数($\times 10^{-4}$)&$17.8\pm0.8$&18.4\p
 %\vspace{4.3cm}
 %\end{minipage}
 \includegraphics[height=4.3cm]{resonance/analysis/Flipper2_NormalizedCounts_20A.pdf}
-\caption{下流フリッパー共鳴実験における規格化粒子数の波長分布}\label{Resonance_fig_Flipper1_NormalizedCounts}
+\caption{下流フリッパー共鳴実験における規格化粒子数の波長分布}\label{Resonance_fig_Flipper2_NormalizedCounts}
 \end{figure}
 
 さらに、図\ref{Resonance_fig_Flipper2_CountsRate}にフリッパーONのときの規格化粒子数をフリッパーOFFのときの規格化粒子数で割ったもの、すなわち上流フリッパーでスピン反転しなかった割合の波長分布を表す。図\ref{Resonance_fig_Flipper2_CountsRate}を見ると、波長$\lambda=$3.0{\AA}から4.0{\AA}あたりで大きく凹んでいることがわかる。
@@ -572,7 +418,7 @@ $3.0{\AA}-4.5{\AA}での規格化粒子数($\times 10^{-4}$)&$17.8\pm0.8$&18.4\p
 \caption{$I_c$に対する波長$\lambda=$3.0{\AA}から4.0{\AA}における規格化粒子数}\label{Resonance_fig_Flipper2_Cur}
 \end{figure}
 
-次に、決まった$I_c$の中心値と最も近い$I_c=0.7$Aのときのスピン反転しなかった割合の波長分布(図\ref{Resonance_fig_Flipper2_CountsRate_5fit})から、最も反転しない割合が低い、すなわち最も反転する波長を推定すると、2次関数フィットの結果、$\lambda=3.40\pm0.03${\AA}と求まった。これを速度に直すと$v=1163\pm10$m/sとなり、この速度が$\pi$フリップ条件を満たすことから$\omega_{r2}/2\pi=9.6\pm0.1$kHzと計算される。
+次に、決まった$I_c$の中心値と最も近い$I_c=0.7$Aのときのスピン反転しなかった割合の波長分布(図\ref{Resonance_fig_Flipper2_CountsRate_7fit})から、最も反転しない割合が低い、すなわち最も反転する波長を推定すると、2次関数フィットの結果、$\lambda=3.40\pm0.03${\AA}と求まった。これを速度に直すと$v=1163\pm10$m/sとなり、この速度が$\pi$フリップ条件を満たすことから$\omega_{r2}/2\pi=9.6\pm0.1$kHzと計算される。
 \begin{figure}[h]
 \centering
 \includegraphics[width=12cm]{resonance/analysis/Flipper2_CountsRate_7A_fit.pdf}
