@@ -174,11 +174,11 @@ N_4=\sqrt{N_2^2+N_3^2}=2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\ome
 これを実験値と比べるためにはもう一工夫必要となる。理論では上流と下流のスピンフリッパーで$\omega_r$の値は等しいとしていた。しかし、実際に測定データから得られた$\omega_r$は上流と下流で異なっていた(\ref{resonance_sec}章参照)。%上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},\omega_{r2}$とすると$\omega_r/2\pi=8.7\pm0.1\,\mathrm{kHz},
 そこで上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},\omega_{r2}$として、2つのフリッパーで$\omega_r$が異なる場合も含めた干渉パターンの式を求めると、式の形は$\omega_r$が等しい場合(\ref{analysis_theory_ippan})と同じで、係数が
 \begin{align}
-&N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)\\ \notag
-&\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d\\
-&N_2 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\cos \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d -\frac{\epsilon}{\omega_{A1}}\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\sin \frac{\omega_{A2}}{v}d\right) \\
-&N_3 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\frac{\epsilon}{\omega_{A1}}\sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d +\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d\right)
-\end{align}\label{analysis_theory_ippanippan}
+&N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right) \label{analysis_N1r}\\ \notag
+&\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d \\
+&N_2 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\cos \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d -\frac{\epsilon}{\omega_{A1}}\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\sin \frac{\omega_{A2}}{v}d\right) \label{analysis_N2r} \\
+&N_3 = 2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d \left(\frac{\epsilon}{\omega_{A1}}\sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d +\frac{\epsilon}{\omega_{A2}} \sin \frac{\omega_{A1}}{v}d\cos \frac{\omega_{A2}}{v}d\right) \label{analysis_N3r}
+\end{align}
 となる。ここで$\omega_{Ai}=\sqrt{\epsilon^2+\omega_{ri}^2} \ (i=1,2)$である。これでパラメータ$C$について実験値と理論値を比較する準備が整った。
 
 \paragraph{実験結果}
@@ -225,7 +225,7 @@ $\epsilon/|\omega_z|$をフィッティングパラメータとして実験値�
 \caption{各種パラメータ}\label{analysis_tbl_parameter}
 \begin{tabular}{ccccc}
 $\omega_{r1}/2\pi$[kHz]&$\omega_{r2}/2\pi$[kHz]&$\omega_{z}/2\pi$[kHz]&$d$[mm]&$L'$[mm]\\ \hline
-4.5&4.8&18.7&30&273
+4.5&4.8&$-18.7$&30&273
 \end{tabular}
 \end{table}
 
@@ -258,10 +258,10 @@ $2$	&$-0.165 \pm0.006$ 	&182\\ \hline
 パラメータ$D$は干渉の波模様がどこを中心に振動しているかを表す。パラメータ$D$は波の位相ではなく波の高さに関係した量であるという点で、前述のパラメータ$B$や$C$と異なる。波の位相については粒子数の相対的な差から情報を得ることができるが、波の高さについては粒子数の絶対値が影響する。したがってパラメータ$D$からはパラメータ$B$,$C$からは知り得なかった粒子数の絶対値に関係した情報を得ることができる。
 
 \paragraph{理論からのアプローチ}
-理論的には$D$は$N_1$に対応する。2つのフリッパーで$\omega_r$が異なる場合も含めた最も一般的な$N_1$の表式は次の通りであった:
+理論的には$D$は$N_1$に対応する。2つのフリッパーで$\omega_r$が異なる場合も含めた最も一般的な$N_1$の表式は次の通りであった(式(\ref{analysis_N1r})):
 \begin{align}
 &N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)\\ \notag
-&\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d
+&\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d \notag
 \end{align}
 これを種々の$\epsilon/|\omega_z|$に対して波長を横軸として図示すると図\ref{analysis_fig_N1}のようになる。各種パラメータには表\ref{analysis_tbl_parameter}の値を用いた。
 \begin{figure}[h]
@@ -319,7 +319,7 @@ $\lambda$[\AA] &  $D(実験)$\\ \hline
 パラメータ$A$は干渉の波模様の振幅を表す。パラメータ$A$は$D$と同様に波の高さに関係した量であり、絶対的な粒子数に関する情報を持つ。一方で位相のずれた波が重なるとうなりが生じて振幅は変化する。その意味でパラメータ$A$は位相に関する情報も持っているといえる。
 
 \paragraph{理論からのアプローチ}
-理論的には$A$は$N_4$に対応する。その具体的な表式は式(\ref{analysis_theory_ippanippan})より
+理論的には$A$は$N_4$に対応する。その具体的な表式は式(\ref{analysis_N2r}),(\ref{analysis_N3r})より
 \begin{align}
 N_4&=\sqrt{N_2^2+N_3^2} \notag \\
 &=2\frac{\omega_{r1}}{\omega_{A1}}\frac{\omega_{r2}}{\omega_{A2}}\sin\frac{\omega_{A1}}{v}d\sin\frac{\omega_{A2}}{v}d\sqrt{\left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right)}
