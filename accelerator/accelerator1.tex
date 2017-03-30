@@ -55,7 +55,7 @@ $d:減速材から検出器までの距離$\\
 後者TOF分布$F(t)$は\begin{equation}F(t)\propto \frac{1}{t^{3}}\exp(-\frac{md^2}{2kTt^2}) \end{equation}で与えられる。
 \subsubsection{補足:中性子のフラックス}
 検出器に速度$v$で入射する中性子の数を考える。
-検出器の表面の微小面積要素$dS$に時間$dt$の間に速度$v=(v_x,v_y,v_z)$で入射する中性子数$dN$は$n$を中性子数密度として
+検出器の表面の微小面積要素$dS$に垂直に$x$軸をとると、時間$dt$の間に速度{\bf v}=$(v_x,v_y,v_z)$で入射する中性子数$dN$は$n$を中性子数密度として
 \begin{equation}
 dN=nv_xdtf(v_x,v_y,v_z)dS
 \end{equation}
@@ -75,11 +75,11 @@ f(v_x,v_y,v_z) \rightarrow f(v,\theta,\phi)={(\frac{m}{2\pi kT})}^{\frac{3}{2}}v
 &=&ndtdS{(\frac{m}{2\pi kT})}^{\frac{3}{2}} v^3\exp(-\frac{mv^2}{2kT}) \hspace{-2pt}\int \hspace{-2pt}\cos\theta\sin\theta d\theta \hspace{-2pt}\int \hspace{-2pt} d\phi \\
 &=&Cv^3\exp(-\frac{mv^2}{2kT})dtdS
 \end{eqnarray*}
-ここでCは速度には依らないが、検出器表面の場所には依存する関数である。
-これより検出器に単位時間あたりに入射する全粒子数$N$は,
+ここでCは速度には依らないが、検出器表面の場所には依存する関数である。\\
+これより検出器にに入射する全粒子数$N$は、
 \begin{eqnarray*}
 N &=&
-\int\limits_{\text{} 検出器表面}Cv^3\exp(-\frac{mv^2}{2kT})dS \\
+\int\int\limits_{\text{} 検出器表面}Cv^3\exp(-\frac{mv^2}{2kT})dSdt \\
 &\propto& v^3\exp(-\frac{mv^2}{2kT})
 \end{eqnarray*}
 この$v$を$t=\frac{d}{v}$で書き換えたものが先に示したTOF分布$F(t)$である。
@@ -93,5 +93,6 @@ LiMの値を実際に測定するとグラフのようになった。但し、�
 \includegraphics[width=9cm,height=8cm]{accelerator/LiM.pdf}\caption{LiMの時間変化}
 \end{figure}\\
 グラフを見ると分かるように本加速器は一定強度ではなく次第にビーム強度が低下し、ある値の周辺で変動する特徴があることが分かる。
+
 
 
