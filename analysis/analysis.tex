@@ -2,14 +2,12 @@
 実験で得られたデータからははっきりと波うつパターンが見て取れる。この章ではその波模様をいくつかの要素に分解し、それぞれについて解析を行う。私たちは望んだ干渉の結果を見ることができたのか。
 
 \subsection{波の分解}
-
 \ref{nonreso_sec}章で述べたように、干渉パターンは最も一般的には、共鳴からのずれを表すパラメータ$\epsilon$と中性子の速度$v$に依存した係数$N_1, N_2, N_3$を用いて
 \begin{equation}
 I=N_1-N_2\cos\left(\frac{2}{v}(\omega d'-\epsilon L')\right) -N_3\sin\left(\frac{2}{v}(\omega d'-\epsilon L')\right) \label{analysis_theory_ippan}
 \end{equation}
 と表せる。ここで$\omega$は位相シフタコイルの磁場$B_p$を用いて$\omega=|\mu_n|B_p$と表される量であり、$d',  L'$はそれぞれ位相シフタコイルの幅、2つのスピンフリッパー間距離である。さらに$N_4=\sqrt{N_2^2+N_3^2}$として
 \begin{equation}
-\cos \phi=\frac{N_2}{N_4},  \quad \sin \phi=\frac{N_3}{N_4}
 \end{equation}
 で$\phi$を定義すれば、干渉パターンは
 \begin{equation}
@@ -47,9 +45,7 @@ $B$には干渉という現象のエッセンスが凝縮されている。上�
 \begin{equation}
 I=\frac{1}{2}\left(1-\cos\frac{2\omega d'}{v}\right) \label{analysis_theory_simple}
 \end{equation}
-となる。このように、非常にシンプルな場合を考えてもスピン上下の位相差を表す$B$の部分の形は変わらない。そのような意味で$B$は干渉の本質を担っている。
-
-\paragraph{理論からのアプローチ}
+となる。このように、非常にシンプルな場合を考えてもスピン上下の位相差を表す$B$の部分の形は変わらない。そのような意味で$B$は干渉の本質を担っている。\paragraph{理論からのアプローチ}
 理論的には$B$は$2\omega d'/v(-I_p)$と書かれるが、$\omega \propto -I_p$であって、具体的に書けば
 \begin{align}
 \omega d'=\frac{|\mu_n|B_p d'}{\hbar}=\frac{(-I_p)|\mu_n| b_p d'}{\hbar}
@@ -170,9 +166,8 @@ N_4=\sqrt{N_2^2+N_3^2}=2\left(\frac{\omega_r}{\omega_A}\right)^2\sin^2\frac{\ome
 \includegraphics[width=10cm]{analysis/C/chi.pdf}
 \caption{中性子の波長$\lambda$に対する$\phi$} \label{analysis_fig_phi}
 \end{figure}
-
 これを実験値と比べるためにはもう一工夫必要となる。理論では上流と下流のスピンフリッパーで$\omega_r$の値は等しいとしていた。しかし、実際に測定データから得られた$\omega_r$は上流と下流で異なっていた(\ref{resonance_sec}章参照)。%上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1},  \omega_{r2}$とすると$\omega_r/2\pi=8.7\pm0.1\, \mathrm{kHz}, 
-そこで上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1}, \omega_{r2}$として、2つのフリッパーで$\omega_r$が異なる場合も含めた干渉パターンの式を求めると、式の形は$\omega_r$が等しい場合(\ref{analysis_theory_ippan})と同じで、係数が
+そこで上流、下流フリッパーの$\omega_r$をそれぞれ$\omega_{r1}, \omega_{r2}$として、2つのフリッパーで$\omega_r$が異なる場合も含めた干渉パターンの式を求めると、式の形は$\omega_r$が等しい場合(\ref{analysis_theory_ippan})と同じで、係数
 \begin{align}
 &N_1 = \left(\cos^2 \frac{\omega_{A1}}{v}d +\left(\frac{\epsilon}{\omega_{A1}}\right)^2\sin^2 \frac{\omega_{A1}}{v}d\right)\left(\cos^2 \frac{\omega_{A2}}{v}d+\left(\frac{\epsilon}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A2}}{v}d\right) \label{analysis_N1r}\\ \notag
 &\hspace{7cm}+\left(\frac{\omega_{r1}}{\omega_{A1}}\right)^2\left(\frac{\omega_{r2}}{\omega_{A2}}\right)^2 \sin^2 \frac{\omega_{A1}}{v}d \sin^2 \frac{\omega_{A2}}{v}d \\
