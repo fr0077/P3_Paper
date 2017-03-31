@@ -6,7 +6,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %ベクトルの定義
-\usepackage{bm} 
+%\usepackage{bm} 一番上にあると表示が変になる
+
 %一括コメントアウト
 %\begin{comment}
 \usepackage{comment}
@@ -86,6 +87,10 @@
 %\includegraphics{figure1.pdf} \subcaption{caption1} includegraphics{figure2.pdf} \subcaption{caption2} \caption{caption}
 \usepackage{subcaption}
 
+%太字ベクトル
+%\bm{B}
+\usepackage{bm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
@@ -100,6 +105,14 @@
 \newcommand{\xequal}[2][]{\ext@arrow 0055{\equalfill@}{#1}{#2}}
 \def\equalfill@{\arrowfill@\Relbar\Relbar\Relbar}
 \makeatother
+
+%偏微分記号(\partialと打つのがめんどくさい)
+%数式中で\del
+\newcommand{\del}{\partial}
+
+%exponentialのe(\mathrm{e}と打つのがめんどくさい)
+%数式中で\e
+\newcommand{\e}{\mathrm{e}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %スタイルの変更はここに追加。
@@ -148,6 +161,7 @@
 \include{abstract/abstract}
 \include{mirror/mirror}
 \include{pi2flipper/pi2flipper}
+\include{nonreso/nonreso}
 \include{detector/detector2}
 \include{angle/angle}
 \include{phase_shifter/phase_shifter}
