@@ -16,22 +16,22 @@ KUANSの性能は以下のようになっている。
 中性子減速材&ポリエチレン($10\times10\times10$ cm$^3$)\\
 \end{tabular}
 \end{table}
-
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=9cm,height=6cm]{accelerator/accphoto.jpg}
 \caption{陽子線形加速器}
 \end{figure}
 
-\subsection{中性子発生方法}
+\paragraph{中性子発生方法}
 まず陽子線形加速器によって陽極で発生させた陽子を電圧で加速させ、シールド内に収められているBeターゲットへと衝突させる。
-この際起こる以下の反応、\\
+この際起こる以下の反応、
 \begin{center}
 $\ce{p} + \ce{^9Be} \to \ce{n} + \ce{^9B}$
 \end{center}
 によって中性子を発生させている。
 しかしこのままの中性子は速すぎて実験に向かないので、KUANSでは減速材を用いて減速させ熱中性子とした後に、陽子ビームの向きと90$^{\circ}$をなす方向から取り出し、実験用中性子ビームとして利用している。
-\subsection {TOF(Time Of Flight)}
+\newpage
+\paragraph{TOF(Time Of Flight)}
 TOFとは一般的に粒子が加速されてから検出器に入るまでに要する時間のことである。
 以降、本実験におけるTOFとは陽子線形加速器に電圧が印加されてから、発生した中性子が検出器に入るまでに要する時間のことを指すこととする。
 このTOFは以下のように表せる。
@@ -47,17 +47,15 @@ $T_f:減速材をでた中性子が検出器に入るまでに要する時間の
 \end{equation}
 $d:減速材から検出器までの距離$\\
 本実験においては約1100m/s、波長にして約3.5Åの範囲にある中性子を用いた。
-\subsection {中性子のTOF分布}
-
-
-\begin{figure}[h]
+\paragraph {中性子のTOF分布}
+\begin{figure}[H]
 \centering
 \includegraphics[width=9cm]{accelerator/TOF1.pdf}
 \caption{実際に測定したTOF分布}
 \end{figure}
 領域①は減速材で熱平衡に達しなかった高速中性子に因る寄与であり、領域②は熱平衡に達した熱中性子に因る寄与である。
 後者TOF分布$F(t)$は\begin{equation}F(t)\propto \frac{1}{t^{3}}\exp\left(-\frac{md^2}{2kTt^2}\right) \end{equation}で与えられる。
-\paragraph{補足:中性子のフラックス} \\
+\paragraph{補足:中性子のフラックス} 
 検出器に速度$v$で入射する中性子の数を考える。
 検出器の表面の微小面積要素$dS$に垂直に$x$軸をとると、時間$dt$の間に速度{\bf v}=$(v_x,v_y,v_z)$で入射する中性子数$dN$は$n$を中性子数密度として
 \begin{equation}
@@ -88,11 +86,11 @@ N &=&
 \end{eqnarray*}
 この$v$を$t=d/v$で書き換えたものが先に示したTOF分布$F(t)$である。
 \newpage
-\paragraph{LiM} \\
+\paragraph{LiM}
 LiM(Lithium Monitor)はシールド内の減速材の後に置かれていて、ビームの一部を取り出して中性子ビーム強度を計測する役割を持つ。
 このLiMの測定値と取り出した中性子ビーム強度は比例すると考えて本実験で規格化する際に用いた。
 グラフはLiMの測定値をある時間だけ抜き出したものである。但し、横軸は時刻である。
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=9cm,height=8cm]{accelerator/LiM.pdf}\caption{LiMの時間変化}
 \end{figure}
