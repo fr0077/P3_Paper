@@ -5,8 +5,6 @@
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%ベクトルの定義
-\usepackage{bm} 
 %一括コメントアウト
 %\begin{comment}
 \usepackage{comment}
@@ -86,6 +84,13 @@
 %\includegraphics{figure1.pdf} \subcaption{caption1} includegraphics{figure2.pdf} \subcaption{caption2} \caption{caption}
 \usepackage{subcaption}
 
+%太字ベクトル
+%\bm{B}
+\usepackage{bm}
+
+%化学式を表示
+\usepackage[version=3]{mhchem}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
@@ -101,8 +106,13 @@
 \def\equalfill@{\arrowfill@\Relbar\Relbar\Relbar}
 \makeatother
 
-%化学式を表示
-\usepackage[version=3]{mhchem}
+%偏微分記号(\partialと打つのがめんどくさい)
+%数式中で\del
+\newcommand{\del}{\partial}
+
+%exponentialのe(\mathrm{e}と打つのがめんどくさい)
+%数式中で\e
+\newcommand{\e}{\mathrm{e}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %スタイルの変更はここに追加。
@@ -131,7 +141,6 @@
 \author[$\dagger$]{加須屋春樹}
 \author[$\dagger$]{近藤寛記}
 \author[$\dagger$]{鈴木一輝}
-\author[$\dagger$]{武中亮}
 \author[$\dagger$]{間宮章}
 \author[$\dagger$]{藤井涼平}
 %Bad practiceだが、こうするくらいしか思いつかない
@@ -150,11 +159,19 @@
 
 %ここで文書をincludeします
 \include{abstract/abstract}
-\include{mirror/mirror}
-\include{accelerator/accelerator1}
 \include{pi2flipper/pi2flipper}
+\include{matrix/matrix}
+\include{nonreso/nonreso}
+\include{accelerator/accelerator1}
+\include{device/device}
+\include{mirror/mirror}
 \include{detector/detector2}
+\include{angle/angle}
+\include{resonance/resonance}
 \include{phase_shifter/phase_shifter}
+\include{analysis/analysis}
+\include{discussion/discussion}
+\include{acknowledgement/acknowledgement}
 
 \bibliographystyle{jplain}
 \bibliography{bibliography}
