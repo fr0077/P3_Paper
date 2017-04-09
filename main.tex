@@ -5,9 +5,6 @@
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%ベクトルの定義
-%\usepackage{bm} 一番上にあると表示が変になる
-
 %一括コメントアウト
 %\begin{comment}
 \usepackage{comment}
@@ -91,6 +88,9 @@
 %\bm{B}
 \usepackage{bm}
 
+%化学式を表示
+\usepackage[version=3]{mhchem}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %マクロはここに追加。
 %1行目に何に使うか、2行目以降に使い方をコメントすること。
@@ -159,15 +159,21 @@
 
 %ここで文書をincludeします
 \include{abstract/abstract}
-\include{mirror/mirror}
 \include{pi2flipper/pi2flipper}
+\include{matrix/matrix}
 \include{nonreso/nonreso}
+\include{accelerator/accelerator1}
+\include{device/device}
+\include{mirror/mirror}
 \include{detector/detector2}
 \include{angle/angle}
+\include{resonance/resonance}
 \include{phase_shifter/phase_shifter}
+\include{analysis/analysis}
+\include{discussion/discussion}
 \include{summary/summary}
-\include{device/device}
 \include{acknowledgement/acknowledgement}
+
 \bibliographystyle{jplain}
 \bibliography{bibliography}
 \end{document}
