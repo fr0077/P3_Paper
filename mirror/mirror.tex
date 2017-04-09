@@ -1,7 +1,10 @@
-\section{スーパーミラーの原理}\label{mirror_sec}
+\section{スーパーミラー}
 \nocite{neutron_spin_optics}
-この実験では、特定のスピンを持つ中性子を選択的に取り出す必要がある。
-この節では、そのために用いるスーパーミラーの原理について説明する。
+スーパーミラーは入射した中性子のうちスピン上向きのみを選択的に取り出す役割を持つ。膜厚を少しずつ変えた多層膜により全反射とBragg反射の両方を利用して幅広いエネルギーの中性子を反射することができる。以下では反射の原理について詳しく説明する。
+\begin{figure}[H]
+\centering
+\includegraphics[width=7cm]{device/mirrorphoto.jpg}\caption{スーパーミラー}
+\end{figure}
 
 \subsection{中性子の光学的性質}
 \paragraph{屈折率}
@@ -92,15 +95,17 @@ $d$を少しずつ変えることで、$V^+<E\sin^2\theta$の様々なエネル�
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8cm]{mirror/super_mirror.pdf}
+\includegraphics[width=6cm]{mirror/super_mirror.pdf}
 \caption{スーパーミラーの構造。(\ref{total_reflection_condition})
 を満たす中性子は第一層で全反射される。より高エネルギーの中性子は一部は反射されるが、
 残りは透過し、Bragg反射される。\label{mirror_super_mirror}}
+\vspace{-7mm}
 \end{figure}
 \begin{figure}[h]
 \centering
-\includegraphics[width=10cm]{mirror/super_mirror_potential.pdf}
+\includegraphics[width=8cm]{mirror/super_mirror_potential.pdf}
 \caption{スーパーミラーのポテンシャル。破線は磁場によらない核力によるポテンシャル。実線（上）は上向きスピンの中性子が感じるポテンシャル。
 実線（下）は下向きスピンの中性子が感じるポテンシャル。空気やシリコンの透磁率は小さいため、全体に磁場をかけても
 ポテンシャルはほとんど影響を受けない。}
+\vspace{-1cm}
 \end{figure}
