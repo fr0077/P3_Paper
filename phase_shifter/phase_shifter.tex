@@ -1,7 +1,7 @@
 \begingroup
 \def\imgwidth{5.5cm}
 
-\section{位相シフタコイルによる干渉}
+\section{本実験：位相シフタコイルによる干渉}\label{phase_shifter_sec}
 本実験である位相シフタコイルによる干渉について、実験手順、結果、解析の順に説明する。
 
 \subsection{実験手順}
@@ -9,12 +9,7 @@
 
 \subsection{実験結果}
 干渉を見るためには、中性子のTOF（波長）を制限する必要がある。
-どの波長を選ぶべきか判断するために、様々な波長での実験か結果をフィットして、最もビジビリティが高かった波長を採用することにする。
-
-\paragraph{ビジビリティが最高となる波長}
-上流フリッパーと下流フリッパーの反転率が1/2となるのは、予備実験からそれぞれ3.75Å, 3.56Åである。
-その付近のいくつかの波長領域について、横軸を位相シフタに流した電流、縦軸をカウント数／LiMのカウント数で割ったものとしてプロットする。
-実線は$-A\cos(Bx+C)+D$でフィットした結果を示している。
+様々な波長領域で制限し、$-A\cos(Bx+C)+D$でフィットした結果が以下のとおりである。
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.33\hsize}
@@ -67,14 +62,12 @@ $\lambda=3.42\pm0.07$Åで最もビジビリティが高くなっていること
 
 \paragraph{最高ビジビリティとなる波長における結果}
 $\lambda=3.42\pm0.07$Åにおける実験結果を以下に示す。
-今後の解析はこの波長で行うことにする。
 \begin{figure}[H]
 \centering
 \includegraphics{phase_shifter/fit.pdf}
 \caption{$\lambda=3.42\pm0.07$Åにおける実験結果とフィット。\label{ps_fitresult}}
 \end{figure}
 
-\subsection{解析}
 \paragraph{理論値との対応}
 図\ref{ps_fitresult}の縦軸はカウント数／LiMカウント数であり、これは理論値と直接対応する値ではない。
 これを理論値と対応付けるために、$|\langle\uparrow|\uparrow\rangle|^2$に対応する、フリッパーをオフにしてスピンをフリップさせずに検出
